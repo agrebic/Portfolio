@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amina Grebić — Portfolio</title>
+<meta name="description" content="Amina Grebić's engineering portfolio — case studies, projects, and profile.">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<![CDATA[<helmet>
+<link rel="stylesheet" href="_ds/modernist-5bb195e1-b8ca-4e7f-b73e-b017a0afdb46/styles.css">
+<script src="_ds/modernist-5bb195e1-b8ca-4e7f-b73e-b017a0afdb46/_ds_bundle.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #faf7f0; color: #14263c; font-family: "IBM Plex Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4, h5, h6 { font-family: "IBM Plex Sans", system-ui, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+  a { color: #14263c; text-decoration: none; }
+  a:hover { color: #9a6a10; }
+  ::selection { background: rgba(240,180,41,.4); }
+  html { scroll-behavior: smooth; }
+  * { min-width: 0; }
+  [data-rail] { scrollbar-width: none; -ms-overflow-style: none; }
+  [data-rail]::-webkit-scrollbar { display: none; }
+  @media (max-width: 1080px) {
+    [data-split], [data-hero], [data-2] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-4] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  }
+  @media (max-width: 760px) {
+    [data-3], [data-4] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-navlinks] { display: none !important; }
+  }
+</style>
+</helmet>
+
+<div style="position: relative; overflow-x: clip">
+
+  <nav style="position: sticky; top: 0; z-index: 60; background: rgba(22,55,94,.97); border-bottom: 1px solid rgba(240,180,41,.22); display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 13px clamp(18px, 3.5vw, 40px)">
+    <a href="#top" style="display: flex; align-items: center; gap: 13px; color: #faf7f0">
+      <span style="display: grid; place-items: center; width: 38px; height: 38px; border-radius: 13px; border: 1.5px solid rgba(240,180,41,.85); color: #f0b429; font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 14px">AG</span>
+      <span style="display: block">
+        <span style="display: block; font-weight: 800; font-size: 14px; letter-spacing: .05em">AMINA GREBIĆ</span>
+        <span style="display: block; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: .15em; color: rgba(240,180,41,.9); margin-top: 3px">{{ t.roleShort }}</span>
+      </span>
+    </a>
+    <div data-navlinks style="display: flex; gap: 20px; flex-wrap: wrap; row-gap: 4px">
+      <sc-for list="{{ t.nav }}" as="item" hint-placeholder-count="6">
+        <a data-spy href="{{ item.href }}" style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .12em; color: rgba(250,247,240,.7); padding: 5px 0; border-bottom: 1.5px solid transparent; white-space: nowrap">{{ item.label }}</a>
+      </sc-for>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px">
+      <div style="display: flex; align-items: center; gap: 3px; background: rgba(250,247,240,.1); border-radius: 999px; padding: 3px">
+        <button type="button" onClick="{{ setBs }}" style="{{ bsStyle }}">BS</button>
+        <button type="button" onClick="{{ setEn }}" style="{{ enStyle }}">EN</button>
+      </div>
+      <a href="#contact" style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: .12em; background: #f0b429; color: #16375e; border-radius: 999px; padding: 11px 20px; white-space: nowrap" style-hover="background: #ffc94d">{{ t.ui.contactCta }}</a>
+    </div>
+  </nav>
+
+  <section id="top" style="position: relative; background: #16375e; color: #faf7f0; padding: clamp(60px, 6.5vw, 96px) clamp(18px, 3.5vw, 40px) 0; overflow: hidden">
+    <div style="position: absolute; top: -20%; right: 0; width: 66%; height: 130%; pointer-events: none; background: radial-gradient(closest-side, rgba(240,180,41,.16), rgba(240,180,41,0))"></div>
+    <div data-hero style="position: relative; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.02fr minmax(0, 1fr); gap: 36px; align-items: end">
+      <div style="padding-bottom: clamp(44px, 5vw, 100px)">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: clamp(22px, 3vw, 36px)">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(13px, 1.4vw, 17px); font-weight: 600; letter-spacing: .2em; color: #f0b429">{{ t.hero.eyebrow }}</span>
+        </div>
+        <h1 style="font-size: clamp(40px, 7vw, 74px); line-height: .98; letter-spacing: -.03em; margin: 0 0 clamp(18px, 3vw, 32px); color: #faf7f0">AMINA<br>GREBIĆ</h1>
+        <p style="font-weight: 800; font-size: clamp(23px, 3vw, 33px); line-height: 1.22; letter-spacing: -.02em; margin: 0 0 24px; max-width: 17em; color: #faf7f0">{{ t.hero.motto1 }}<br><span style="color: #f0b429">{{ t.hero.motto2 }}</span></p>
+        <p style="font-size: clamp(16px, 1.3vw, 18px); line-height: 1.7; color: rgba(250,247,240,.72); max-width: 37em; margin: 0 0 clamp(28px, 3.5vw, 44px); text-wrap: pretty">{{ t.hero.lead }}</p>
+        <div data-3 style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 700px">
+          <sc-for list="{{ t.hero.meta }}" as="m" hint-placeholder-count="3">
+            <div style="background: rgba(250,247,240,.07); border-radius: 18px; padding: 19px 21px">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: .15em; color: rgba(240,180,41,.9); margin-bottom: 8px">{{ m.label }}</div>
+              <div style="font-size: 14px; line-height: 1.5; font-weight: 600">{{ m.text }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="position: relative; align-self: end">
+        <div style="position: absolute; inset: 0 0 4%; background: radial-gradient(closest-side, rgba(250,247,240,.2), rgba(250,247,240,0)); pointer-events: none"></div>
+        <img src="assets/hero-amina.png" alt="Amina at her desk surrounded by the artifacts of her engineering process" style="position: relative; width: 100%; height: auto; display: block">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="position: relative; background: #faf7f0; padding: clamp(92px, 10vw, 176px) clamp(18px, 3.5vw, 40px)">
+    <div style="position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(22,55,94,.16) 1px, transparent 1px); background-size: 22px 22px; opacity: {{ textureOpacity }}"></div>
+    <div data-split style="position: relative; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px)">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #9a6a10; padding-bottom: 12px; border-bottom: 1px solid #e6e0d4">{{ t.about.kicker }}</div>
+        <div style="font-family: 'Caveat', cursive; font-size: 22px; color: #6b7684; margin-top: 18px; display: {{ annotationDisplay }}">{{ t.about.annotation }}</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: .14em; color: #9a6a10; margin-top: 26px; margin-bottom: 8px">{{ t.ui.educationLabel }}</div>
+        <div style="font-size: 13px; line-height: 1.7; color: #6f7681; white-space: pre-line">{{ t.about.education }}</div>
+      </div>
+      <div>
+        <h2 style="font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.025em; max-width: 26em; margin: 0 0 30px">{{ t.about.heading }}</h2>
+        <div data-2 style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(22px, 3vw, 44px)">
+          <div>
+            <sc-for list="{{ t.about.paras }}" as="p" hint-placeholder-count="3">
+              <p style="font-size: 17px; line-height: 1.72; color: #45566a; text-wrap: pretty">{{ p }}</p>
+            </sc-for>
+          </div>
+          <div>
+            <div style="border-radius: 20px; background: rgba(240,180,41,.13); padding: 24px 26px; margin-bottom: 24px">
+              <p style="font-size: 18px; line-height: 1.58; font-weight: 600; margin: 0">{{ t.about.pull }}</p>
+            </div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 13px">{{ t.ui.considerLabel }}</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <sc-for list="{{ t.about.consider }}" as="c" hint-placeholder-count="6">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #faf7f0; border: 1px solid #e2dbcb; border-radius: 999px; padding: 7px 13px; color: #45566a">{{ c }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profile" style="position: relative; background: #16375e; color: #faf7f0; padding: clamp(92px, 10vw, 176px) clamp(18px, 3.5vw, 40px); overflow: hidden">
+    <div data-split style="position: relative; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px)">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #f0b429; padding-bottom: 12px; border-bottom: 1px solid rgba(240,180,41,.35); height: fit-content">{{ t.profile.kicker }}</div>
+      <div>
+        <h2 style="font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.025em; margin: 0 0 16px; max-width: 24em">{{ t.profile.heading }}</h2>
+        <p style="font-size: 17px; line-height: 1.7; color: rgba(250,247,240,.7); max-width: 42em; margin: 0 0 clamp(28px, 4vw, 44px)">{{ t.profile.lead }}</p>
+        <div data-2 style="display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center">
+          <div style="position: relative; width: 100%; aspect-ratio: 1 / 1">
+            <svg viewBox="0 0 320 320" style="{{ profileRadar.svgStyle }}">
+              <sc-for list="{{ profileRadar.rings }}" as="ring" hint-placeholder-count="4">
+                <polygon points="{{ ring.poly }}" fill="none" stroke="{{ profileRadar.gridColor }}" stroke-width="{{ ring.w }}"></polygon>
+              </sc-for>
+              <sc-for list="{{ profileRadar.axes }}" as="ax" hint-placeholder-count="8">
+                <line x1="160" y1="160" x2="{{ ax.x }}" y2="{{ ax.y }}" stroke="{{ profileRadar.gridColor }}" stroke-width="1"></line>
+              </sc-for>
+              <polygon points="{{ profileRadar.shape }}" fill="rgba(240,180,41,.32)" stroke="#f0b429" stroke-width="2" stroke-linejoin="round"></polygon>
+              <sc-for list="{{ profileRadar.points }}" as="pt" hint-placeholder-count="8">
+                <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="3.4" fill="#f0b429" stroke="{{ profileRadar.dotStroke }}" stroke-width="1.4"></circle>
+              </sc-for>
+            </svg>
+            <sc-for list="{{ profileRadar.tags }}" as="lb" hint-placeholder-count="8">
+              <div style="{{ lb.style }}">{{ lb.text }}</div>
+            </sc-for>
+          </div>
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #f0b429; margin-bottom: 14px">{{ t.ui.recurringPattern }}</div>
+            <p style="font-size: clamp(19px, 2vw, 23px); line-height: 1.45; font-weight: 700; margin: 0 0 24px">{{ t.profile.statement }}</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px">
+              <sc-for list="{{ t.profile.emphasis }}" as="e" hint-placeholder-count="4">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: rgba(240,180,41,.16); color: #f0b429; border-radius: 999px; padding: 8px 14px">{{ e }}</span>
+              </sc-for>
+            </div>
+            <p style="font-size: 13px; line-height: 1.6; color: rgba(250,247,240,.55); margin: 0">{{ t.ui.radarNote }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey" style="background: #f4efe4; padding: clamp(92px, 10vw, 176px) clamp(18px, 3.5vw, 40px); position: relative">
+    <div style="position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(22,55,94,.16) 1px, transparent 1px); background-size: 22px 22px; opacity: {{ textureOpacity }}"></div>
+    <div style="position: relative; max-width: 1400px; margin: 0 auto">
+      <div data-split style="display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px); margin-bottom: clamp(32px, 4vw, 56px)">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #9a6a10; padding-bottom: 12px; border-bottom: 1px solid #ded7c8; height: fit-content">{{ t.journey.kicker }}</div>
+        <div>
+          <h2 style="font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.025em; margin: 0 0 16px; max-width: 24em">{{ t.journey.heading }}</h2>
+          <p style="font-size: 17px; line-height: 1.7; color: #45566a; max-width: 42em; margin: 0">{{ t.journey.lead }}</p>
+        </div>
+      </div>
+      <div data-split style="display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px)">
+        <div></div>
+        <div style="border-left: 1px solid #ddd5c4">
+          <sc-for list="{{ t.journey.chapters }}" as="ch" hint-placeholder-count="5">
+            <div style="position: relative; padding: 0 0 38px clamp(22px, 3vw, 38px)">
+              <span style="position: absolute; left: -7px; top: 7px; width: 14px; height: 14px; border-radius: 999px; background: #f0b429; border: 3px solid #f4efe4"></span>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .13em; color: #9a6a10; margin-bottom: 10px">{{ ch.label }}</div>
+              <h3 style="font-size: clamp(19px, 2.1vw, 24px); margin: 0 0 10px; letter-spacing: -.02em; line-height: 1.28">{{ ch.title }}</h3>
+              <p style="font-size: 16px; line-height: 1.68; color: #45566a; max-width: 46em; margin: 0 0 14px">{{ ch.text }}</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <sc-for list="{{ ch.focus }}" as="fx" hint-placeholder-count="3">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #faf7f0; border-radius: 999px; padding: 7px 13px; color: #45566a">{{ fx }}</span>
+                </sc-for>
+                <sc-for list="{{ ch.tech }}" as="tc" hint-placeholder-count="2">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #ded7c8; border-radius: 999px; padding: 7px 13px; color: #6b7684">{{ tc }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="position: relative; background: #16375e; color: #faf7f0; padding: clamp(92px, 10vw, 176px) 0 clamp(92px, 10vw, 164px)">
+    <div style="position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(250,247,240,.1) 1px, transparent 1px); background-size: 22px 22px; opacity: {{ textureOpacity }}"></div>
+    <div style="position: relative; max-width: 1400px; margin: 0 auto; padding: 0 clamp(18px, 3.5vw, 40px)">
+      <div data-split style="display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px); margin-bottom: clamp(28px, 4vw, 44px)">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #f0b429; padding-bottom: 12px; border-bottom: 1px solid rgba(240,180,41,.35); height: fit-content">{{ t.work.kicker }}</div>
+        <div>
+          <h2 style="font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.025em; margin: 0 0 16px; max-width: 24em">{{ t.work.heading }}</h2>
+          <p style="font-size: 17px; line-height: 1.7; color: rgba(250,247,240,.72); max-width: 42em; margin: 0">{{ t.work.lead }}</p>
+        </div>
+      </div>
+    </div>
+    <div style="position: relative">
+      <div id="work-rail" data-rail style="display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 8px clamp(58px, 7vw, 92px) 26px">
+        <sc-for list="{{ cards }}" as="card" hint-placeholder-count="4">
+          <button type="button" onClick="{{ card.open }}" style="{{ card.rootStyle }}">
+            <span style="{{ card.headRowStyle }}">
+              <span style="{{ card.indexStyle }}">{{ card.index }}</span>
+              <span style="{{ card.yearStyle }}">{{ card.year }}</span>
+            </span>
+            <span style="{{ card.shotStyle }}">
+              <img src="{{ card.shot }}" alt="{{ card.title }}" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block">
+            </span>
+            <span style="{{ card.kickerStyle }}">{{ card.kicker }}</span>
+            <span style="{{ card.titleStyle }}">{{ card.title }}</span>
+            <sc-if value="{{ card.hasMethod }}" hint-placeholder-val="{{ false }}">
+              <span style="{{ card.methodStyle }}">{{ card.method }}</span>
+            </sc-if>
+            <span style="display: flex; flex-wrap: wrap; gap: 7px">
+              <sc-for list="{{ card.focus }}" as="fx" hint-placeholder-count="3">
+                <span style="{{ card.tagStyle }}">{{ fx }}</span>
+              </sc-for>
+      </div>
+      <button type="button" onClick="{{ railPrev }}" aria-label="{{ t.ui.prev }}" style="position: absolute; top: 50%; left: clamp(10px, 2vw, 24px); transform: translateY(-50%); width: 52px; height: 52px; border-radius: 999px; border: 1px solid rgba(250,247,240,.3); background: rgba(250,247,240,.1); color: #faf7f0; font-size: 22px; line-height: 1; cursor: pointer; box-shadow: 0 8px 24px rgba(22,55,94,.14); display: grid; place-items: center" style-hover="background: #f0b429; color: #16375e; border-color: #f0b429">‹</button>
+      <button type="button" onClick="{{ railNext }}" aria-label="{{ t.ui.next }}" style="position: absolute; top: 50%; right: clamp(10px, 2vw, 24px); transform: translateY(-50%); width: 52px; height: 52px; border-radius: 999px; border: 1px solid rgba(250,247,240,.3); background: rgba(250,247,240,.1); color: #faf7f0; font-size: 22px; line-height: 1; cursor: pointer; box-shadow: 0 8px 24px rgba(22,55,94,.14); display: grid; place-items: center" style-hover="background: #f0b429; color: #16375e; border-color: #f0b429">›</button>
+    </div>
+  </section>
+
+  <section id="skills" style="position: relative; background: #faf7f0; padding: clamp(92px, 10vw, 176px) clamp(18px, 3.5vw, 40px); overflow: hidden">
+    <div style="position: relative; max-width: 1400px; margin: 0 auto">
+      <div data-split style="display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px); margin-bottom: clamp(28px, 4vw, 48px)">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #9a6a10; padding-bottom: 12px; border-bottom: 1px solid #e6e0d4; height: fit-content">{{ t.skills.kicker }}</div>
+        <div>
+          <h2 style="font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; letter-spacing: -.025em; margin: 0 0 16px; max-width: 24em">{{ t.skills.heading }}</h2>
+          <sc-if value="{{ hasSkillsLead }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size: 17px; line-height: 1.7; color: #45566a; max-width: 42em; margin: 0">{{ t.skills.lead }}</p>
+          </sc-if>
+        </div>
+      </div>
+      <div data-3 style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: clamp(32px, 4vw, 52px)">
+        <sc-for list="{{ t.skills.groups }}" as="g" hint-placeholder-count="6">
+          <div style="background: #f4efe4; border-radius: 22px; padding: 24px 26px">
+            <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px">{{ g.title }}</div>
+            <div style="font-size: 14px; line-height: 1.7; color: #45566a">{{ g.items }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div data-2 style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px)">
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 18px">{{ t.skills.techKicker }}</div>
+          <div style="display: grid; gap: 16px">
+            <sc-for list="{{ t.skills.tech }}" as="tg" hint-placeholder-count="4">
+              <div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .12em; color: #6f7681; margin-bottom: 8px">{{ tg.label }}</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <sc-for list="{{ tg.items }}" as="i" hint-placeholder-count="4">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #e2dbcb; border-radius: 999px; padding: 7px 13px">{{ i }}</span>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <p style="font-size: 13px; line-height: 1.6; color: #6f7681; margin: 16px 0 0">{{ t.skills.techNote }}</p>
+        </div>
+        <div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 18px">{{ t.quality.kicker }}</div>
+          <h3 style="font-size: 22px; line-height: 1.3; margin: 0 0 12px">{{ t.quality.heading }}</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: #45566a; margin: 0 0 18px">{{ t.quality.lead }}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px">
+            <sc-for list="{{ t.quality.areas }}" as="a" hint-placeholder-count="8">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #ece5d6; border-radius: 999px; padding: 7px 13px">{{ a }}</span>
+            </sc-for>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .12em; color: #6f7681">{{ t.quality.techLabel }} · C#</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" style="position: relative; background: #16375e; color: #faf7f0; padding: clamp(88px, 9vw, 148px) clamp(18px, 3.5vw, 40px)">
+    <div style="position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(250,247,240,.1) 1px, transparent 1px); background-size: 22px 22px; opacity: {{ textureOpacity }}"></div>
+    <div data-split style="position: relative; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px)">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #f0b429; padding-bottom: 12px; border-bottom: 1px solid rgba(240,180,41,.35); height: fit-content">{{ t.ach.kicker }}</div>
+      <div>
+        <div style="max-width: 52em">
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .13em; color: #f0b429; margin-bottom: 10px">{{ t.ach.meta }}</div>
+          <h3 style="font-size: clamp(21px, 2.3vw, 27px); line-height: 1.24; letter-spacing: -.02em; margin: 0 0 14px">{{ t.ach.title }}</h3>
+          <p style="font-size: 16px; line-height: 1.72; color: rgba(250,247,240,.72); margin: 0 0 12px">{{ t.ach.text1 }}</p>
+          <p style="font-size: 16px; line-height: 1.72; color: rgba(250,247,240,.72); margin: 0 0 18px">{{ t.ach.text2 }}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px">
+            <sc-for list="{{ t.ach.strengthened }}" as="x" hint-placeholder-count="5">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid rgba(250,247,240,.24); border-radius: 999px; padding: 7px 13px; color: rgba(250,247,240,.72)">{{ x }}</span>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display: {{ evidenceGrid }}; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px">
+          <sc-for list="{{ achShots }}" as="sh" hint-placeholder-count="3">
+            <button type="button" onClick="{{ sh.zoom }}" title="{{ t.ui.enlarge }}" style="padding: 0; border: 1px solid rgba(250,247,240,.16); border-radius: 16px; overflow: hidden; background: rgba(250,247,240,.07); cursor: zoom-in; display: block">
+              <img src="{{ sh.src }}" alt="Roomy" style="width: 100%; height: clamp(150px, 17vw, 240px); object-fit: cover; display: block">
+            </button>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="direction" style="position: relative; background: #f4efe4; padding: clamp(92px, 10vw, 176px) clamp(18px, 3.5vw, 40px)">
+    <div style="position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(22,55,94,.16) 1px, transparent 1px); background-size: 22px 22px; opacity: {{ textureOpacity }}"></div>
+    <div data-split style="position: relative; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px)">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #9a6a10; padding-bottom: 12px; border-bottom: 1px solid #ded7c8; height: fit-content">{{ t.dir.kicker }}</div>
+      <div>
+        <div style="margin-bottom: clamp(38px, 5vw, 64px)">
+          <h2 style="font-size: clamp(24px, 2.8vw, 34px); line-height: 1.2; letter-spacing: -.02em; margin: 0 0 14px">{{ t.how.heading }}</h2>
+          <p style="font-size: 17px; line-height: 1.72; color: #45566a; max-width: 42em; margin: 0 0 26px">{{ t.how.lead }}</p>
+          <div data-3 style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+            <sc-for list="{{ t.how.steps }}" as="st" hint-placeholder-count="6">
+              <div style="background: #faf7f0; border: 1px solid #e6e0d4; border-radius: 20px; padding: 20px 22px">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 8px">{{ st.no }}</div>
+                <div style="font-size: 16px; font-weight: 700; margin-bottom: 6px">{{ st.title }}</div>
+                <div style="font-size: 13.5px; line-height: 1.6; color: #6b7684">{{ st.text }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      <div data-2 style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(26px, 4vw, 56px)">
+        <div>
+          <h2 style="font-size: clamp(24px, 2.8vw, 34px); line-height: 1.2; letter-spacing: -.02em; margin: 0 0 14px">{{ t.ai.heading }}</h2>
+          <p style="font-size: 16px; line-height: 1.72; color: #45566a; margin: 0 0 18px">{{ t.ai.lead }}</p>
+          <div style="display: grid; gap: 10px; margin-bottom: 16px">
+            <sc-for list="{{ t.ai.items }}" as="i" hint-placeholder-count="3">
+              <div style="background: #faf7f0; border-radius: 18px; padding: 16px 20px">
+                <div style="font-size: 15px; font-weight: 800; margin-bottom: 5px">{{ i.title }}</div>
+                <div style="font-size: 13.5px; line-height: 1.6; color: #6b7684">{{ i.text }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <p style="font-size: 17px; line-height: 1.55; font-weight: 700; margin: 0">{{ t.ai.closing }}</p>
+        </div>
+        <div>
+          <h2 style="font-size: clamp(24px, 2.8vw, 34px); line-height: 1.2; letter-spacing: -.02em; margin: 0 0 14px">{{ t.lead.heading }}</h2>
+          <div style="display: grid; gap: 18px; margin-bottom: 28px">
+            <sc-for list="{{ t.lead.blocks }}" as="b" hint-placeholder-count="2">
+              <div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 8px">{{ b.title }}</div>
+                <p style="font-size: 16px; line-height: 1.72; color: #45566a; margin: 0">{{ b.text }}</p>
+              </div>
+            </sc-for>
+          </div>
+          <h3 style="font-size: clamp(19px, 2.1vw, 24px); line-height: 1.25; letter-spacing: -.02em; margin: 26px 0 16px">{{ t.dir.heading }}</h3>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 13px">{{ t.dir.areasLabel }}</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px">
+            <sc-for list="{{ t.dir.areas }}" as="a" hint-placeholder-count="4">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #cbc2b0; border-radius: 999px; padding: 7px 13px; color: #14263c">{{ a }}</span>
+            </sc-for>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 13px">{{ t.dir.exploreLabel }}</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px">
+            <sc-for list="{{ t.dir.explore }}" as="a" hint-placeholder-count="4">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: rgba(240,180,41,.16); border-radius: 999px; padding: 7px 13px; color: #7a5410">{{ a }}</span>
+            </sc-for>
+          </div>
+          <p style="font-size: 16px; line-height: 1.72; color: #45566a; margin: 0">{{ t.dir.lead }}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="position: relative; background: #16375e; color: #faf7f0; padding: clamp(92px, 10vw, 176px) clamp(18px, 3.5vw, 40px) clamp(36px, 4vw, 56px); overflow: hidden">
+    <div style="position: absolute; top: -30%; left: 42%; width: 58%; height: 150%; pointer-events: none; background: radial-gradient(closest-side, rgba(240,180,41,.13), rgba(240,180,41,0))"></div>
+    <div data-split style="position: relative; max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: clamp(26px, 4vw, 60px)">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em; color: #f0b429; padding-bottom: 12px; border-bottom: 1px solid rgba(240,180,41,.35); height: fit-content">{{ t.contact.kicker }}</div>
+      <div>
+        <h2 style="font-size: clamp(26px, 3.2vw, 40px); line-height: 1.16; letter-spacing: -.025em; margin: 0 0 14px; max-width: 24em">{{ t.contact.heading }}</h2>
+        <div style="height: clamp(24px, 3vw, 38px)"></div>
+        <div data-3 style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-bottom: clamp(34px, 4vw, 52px)">
+          <sc-for list="{{ contactItems }}" as="ci" hint-placeholder-count="3">
+            <a href="{{ ci.href }}" target="{{ ci.target }}" rel="noopener" style="display: flex; flex-direction: column; gap: 10px; background: rgba(250,247,240,.07); border: 1px solid rgba(250,247,240,.12); border-radius: 22px; padding: 24px 26px; color: #faf7f0" style-hover="background: rgba(240,180,41,.14); border-color: rgba(240,180,41,.5); color: #faf7f0">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .15em; color: #f0b429">{{ ci.label }}</span>
+              <span style="font-size: 16px; font-weight: 600; line-height: 1.4; word-break: break-word">{{ ci.value }}</span>
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(250,247,240,.6); margin-top: auto">{{ ci.action }}</span>
+            </a>
+          </sc-for>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; border-top: 1px solid rgba(250,247,240,.16); padding-top: 22px">
+          <div>
+            <div style="font-size: 18px; font-weight: 700">AMINA GREBIĆ</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .13em; color: rgba(240,180,41,.9); margin-top: 6px">{{ t.roleShort }}</div>
+            <div style="font-size: 13.5px; color: rgba(250,247,240,.55); margin-top: 6px">Sarajevo, Bosnia and Herzegovina</div>
+          </div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .13em; color: rgba(250,247,240,.45)">AMINA GREBIĆ · SOFTWARE ENGINEER · 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeCase }}" style="position: fixed; inset: 0; z-index: 90; background: rgba(12,32,56,.72); display: flex; align-items: center; justify-content: center; padding: clamp(8px, 2.5vw, 34px)">
+      <div onClick="{{ stopProp }}" style="position: relative; width: min(1060px, 100%); max-height: 94vh; display: flex; flex-direction: column; background: #faf7f0; border-radius: 26px; overflow: hidden; box-shadow: 0 30px 90px rgba(12,32,56,.4)">
+        <div style="position: relative; flex: 0 0 auto; background: #16375e; color: #faf7f0; padding: clamp(20px, 3vw, 32px) clamp(20px, 3.5vw, 42px)">
+          <button type="button" onClick="{{ closeCase }}" aria-label="Close" style="position: absolute; top: 18px; right: 18px; width: 40px; height: 40px; border-radius: 999px; border: 1px solid rgba(250,247,240,.3); background: transparent; color: #faf7f0; font-size: 16px; cursor: pointer; font-family: 'IBM Plex Mono', monospace" style-hover="background: rgba(250,247,240,.12)">✕</button>
+          <div style="position: relative; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 18px; padding-right: 52px">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .13em; background: #f0b429; color: #16375e; border-radius: 999px; padding: 8px 15px; font-weight: 700">{{ c.badge }}</span>
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(250,247,240,.68)">{{ c.meta }}</span>
+          </div>
+          <h2 style="position: relative; font-size: clamp(24px, 3vw, 36px); line-height: 1.16; letter-spacing: -.025em; margin: 0 0 10px">{{ c.title }}</h2>
+          <p style="position: relative; font-size: clamp(16px, 1.6vw, 18px); line-height: 1.5; font-weight: 600; color: #f0b429; max-width: 34em; margin: 0 0 16px">{{ c.subtitle }}</p>
+          <div style="position: relative; display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+            <sc-if value="{{ c.hasLive }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ c.live }}" target="_blank" rel="noopener" style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: .12em; background: #f0b429; color: #16375e; border-radius: 999px; padding: 11px 20px" style-hover="background: #ffc94d; color: #16375e">{{ t.ui.openLive }}</a>
+            </sc-if>
+            <sc-if value="{{ c.isPrivate }}" hint-placeholder-val="{{ false }}">
+              <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .1em; border: 1px solid rgba(250,247,240,.28); border-radius: 999px; padding: 9px 16px; color: rgba(250,247,240,.7)">{{ t.ui.privateSystem }}</span>
+            </sc-if>
+          </div>
+        </div>
+        <div style="flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; padding: clamp(24px, 3.5vw, 42px) clamp(20px, 3.5vw, 42px) clamp(30px, 4vw, 46px); display: grid; gap: clamp(28px, 3.5vw, 44px)">
+
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 14px">{{ t.ui.b1 }}</div>
+            <p style="font-size: clamp(17px, 1.7vw, 19px); line-height: 1.7; color: #2c3d52; max-width: 44em; margin: 0 0 22px">{{ c.problem }}</p>
+            <sc-if value="{{ c.hasProblem }}" hint-placeholder-val="{{ false }}">
+              <div style="display: {{ evidenceGrid }}; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+                <sc-for list="{{ c.beforeAfter }}" as="sh" hint-placeholder-count="2">
+                  <div>
+                    <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .13em; color: #6f7681; margin-bottom: 8px">{{ sh.label }}</div>
+                    <button type="button" onClick="{{ sh.zoom }}" title="{{ t.ui.enlarge }}" style="width: 100%; padding: 0; border: 1px solid #e6e0d4; border-radius: 16px; overflow: hidden; background: #f4efe4; cursor: zoom-in; display: block">
+                      <img src="{{ sh.src }}" alt="{{ sh.label }}" style="width: 100%; height: clamp(130px, 15vw, 210px); object-fit: cover; object-position: top center; display: block">
+                    </button>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .1em; color: #6f7681; margin-top: 10px">{{ t.ui.enlargeHint }}</div>
+            </sc-if>
+          </div>
+
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 14px">{{ t.ui.b2 }}</div>
+            <p style="font-size: clamp(17px, 1.7vw, 19px); line-height: 1.7; color: #2c3d52; max-width: 44em; margin: 0 0 24px">{{ c.systemText }}</p>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .13em; color: #6f7681; margin-bottom: 12px">{{ t.ui.scopeLabel }}</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px">
+              <sc-for list="{{ c.scope }}" as="st" hint-placeholder-count="6">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #f4efe4; border-radius: 999px; padding: 9px 15px; color: #16375e">{{ st }}</span>
+              </sc-for>
+            </div>
+            <sc-if value="{{ c.hasCaps }}" hint-placeholder-val="{{ false }}">
+              <div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .13em; color: #6f7681; margin-bottom: 12px">{{ t.ui.capabilitiesLabel }}</div>
+                <div data-2 style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+                  <sc-for list="{{ c.capabilities }}" as="cap" hint-placeholder-count="4">
+                    <div style="background: #f4efe4; border-radius: 20px; padding: 20px 22px">
+                      <div style="font-size: 16px; font-weight: 700; margin-bottom: 7px">{{ cap.title }}</div>
+                      <div style="font-size: 14px; line-height: 1.6; color: #6b7684">{{ cap.text }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ c.hasOperational }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top: 18px">
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .13em; color: #6f7681; margin-bottom: 12px">{{ t.ui.operationalCapabilities }}</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <sc-for list="{{ c.operational }}" as="o" hint-placeholder-count="6">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #e2dbcb; border-radius: 999px; padding: 7px 13px; color: #45566a">{{ o }}</span>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 18px">{{ t.ui.b3 }}</div>
+            <div data-2 style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(22px, 3vw, 46px); align-items: center">
+              <div style="position: relative; width: 100%; aspect-ratio: 1 / 1">
+                <svg viewBox="0 0 320 320" style="{{ c.radar.svgStyle }}">
+                  <sc-for list="{{ c.radar.rings }}" as="ring" hint-placeholder-count="4">
+                    <polygon points="{{ ring.poly }}" fill="none" stroke="{{ c.radar.gridColor }}" stroke-width="{{ ring.w }}"></polygon>
+                  </sc-for>
+                  <sc-for list="{{ c.radar.axes }}" as="ax" hint-placeholder-count="8">
+                    <line x1="160" y1="160" x2="{{ ax.x }}" y2="{{ ax.y }}" stroke="{{ c.radar.gridColor }}" stroke-width="1"></line>
+                  </sc-for>
+                  <polygon points="{{ c.radar.shape }}" fill="rgba(240,180,41,.32)" stroke="#f0b429" stroke-width="2" stroke-linejoin="round"></polygon>
+                  <sc-for list="{{ c.radar.points }}" as="pt" hint-placeholder-count="8">
+                    <circle cx="{{ pt.x }}" cy="{{ pt.y }}" r="3.4" fill="#f0b429" stroke="{{ c.radar.dotStroke }}" stroke-width="1.4"></circle>
+                  </sc-for>
+                </svg>
+                <sc-for list="{{ c.radar.tags }}" as="lb" hint-placeholder-count="8">
+                  <div style="{{ lb.style }}">{{ lb.text }}</div>
+                </sc-for>
+              </div>
+              <div>
+                <p style="font-size: 16px; line-height: 1.72; color: #2c3d52; margin: 0 0 20px">{{ c.contribution }}</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px">
+                  <sc-for list="{{ c.primary }}" as="x" hint-placeholder-count="4">
+                    <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #16375e; color: #f0b429; border-radius: 999px; padding: 8px 14px">{{ x }}</span>
+                  </sc-for>
+                </div>
+                <sc-if value="{{ c.hasSupporting }}" hint-placeholder-val="{{ false }}">
+                  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px">
+                    <sc-for list="{{ c.supporting }}" as="x" hint-placeholder-count="3">
+                      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #e2dbcb; border-radius: 999px; padding: 7px 13px; color: #45566a">{{ x }}</span>
+                    </sc-for>
+                  </div>
+                </sc-if>
+                <p style="font-size: 12.5px; line-height: 1.6; color: #6f7681; margin: 0">{{ t.ui.radarNote }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-2 style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(22px, 3vw, 46px)">
+            <div style="background: rgba(240,180,41,.13); border-radius: 22px; padding: 26px 28px">
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 12px">{{ t.ui.b4 }}</div>
+              <p style="font-size: 16px; line-height: 1.72; color: #2c3d52; margin: 0">{{ c.challenge }}</p>
+            </div>
+            <div>
+              <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 12px">{{ t.ui.b5 }}</div>
+              <p style="font-size: 16px; line-height: 1.72; color: #2c3d52; margin: 0 0 16px">{{ c.validation }}</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <sc-for list="{{ c.methods }}" as="m" hint-placeholder-count="4">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #f4efe4; border-radius: 999px; padding: 7px 13px; color: #45566a">{{ m }}</span>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .14em; color: #9a6a10; margin-bottom: 14px">{{ t.ui.b6 }}</div>
+            <sc-if value="{{ c.hasTech }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px">
+                <sc-for list="{{ c.tech }}" as="tc" hint-placeholder-count="6">
+                  <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; border: 1px solid #d8d0be; border-radius: 999px; padding: 7px 13px; color: #16375e">{{ tc }}</span>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ c.hasSystemShots }}" hint-placeholder-val="{{ false }}">
+              <div style="display: {{ evidenceDisplay }}">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px">
+                  <sc-for list="{{ c.systemShots }}" as="sh" hint-placeholder-count="3">
+                    <button type="button" onClick="{{ sh.zoom }}" title="{{ t.ui.enlarge }}" style="padding: 0; border: 1px solid #e6e0d4; border-radius: 16px; overflow: hidden; background: #f4efe4; cursor: zoom-in; display: block">
+                      <img src="{{ sh.src }}" alt="{{ sh.hint }}" style="width: 100%; height: clamp(120px, 12vw, 165px); object-fit: cover; object-position: top center; display: block">
+                    </button>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ zoomOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeZoom }}" style="position: fixed; inset: 0; z-index: 120; background: rgba(9,24,42,.93); display: flex; align-items: center; justify-content: center; padding: clamp(12px, 3vw, 48px); cursor: zoom-out">
+      <img src="{{ zoomSrc }}" alt="" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 10px">
+      <button type="button" onClick="{{ closeZoom }}" aria-label="{{ t.ui.close }}" style="position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; border-radius: 999px; border: 1px solid rgba(250,247,240,.35); background: transparent; color: #faf7f0; font-size: 17px; cursor: pointer">✕</button>
+    </div>
+  </sc-if>
+</div>
+]]>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnnotations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Character&quot;},&quot;showPaperTexture&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Character&quot;},&quot;showSystemPhotos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+const VALS = {
+  profile: [5, 5, 4.8, 4.8, 4.2, 4.2, 4.4, 4.5],
+  bank: [5, 5, 5, 4.5, 4.5, 4.5, 4, 3.5],
+  rac: [5, 5, 5, 4.5, 4, 4, 4.5, 4],
+  taxi: [5, 5, 5, 5, 5, 4.5, 4.5, 4, 3],
+  svc: [5, 5, 5, 5, 4.5, 5, 5, 4.5],
+  hci: [5, 5, 4.5, 4.5, 4, 3],
+  dwh: [5, 5, 4.5, 4.5, 4.5, 3, 3]
+};
+
+const EN = {
+  roleShort: "SOFTWARE ENGINEER",
+  nav: [
+    { label: "ABOUT", href: "#about" },
+    { label: "PROFILE", href: "#profile" },
+    { label: "JOURNEY", href: "#journey" },
+    { label: "WORK", href: "#work" },
+    { label: "COMPETENCIES", href: "#skills" },
+    { label: "NEW HORIZONS", href: "#direction" }
+  ],
+  ui: {
+    contactCta: "CONTACT",
+    considerLabel: "WHAT I CONSIDER BEFORE DECIDING",
+    viewCase: "Open case study",
+    prev: "Previous project",
+    next: "Next project",
+    primary: "PRIMARY CONTRIBUTION",
+    supporting: "SUPPORTING EXPERIENCE",
+    additional: "ADDITIONAL CONTRIBUTION",
+    methods: "METHODS & ARTIFACTS",
+    techEnv: "TECHNOLOGY ENVIRONMENT",
+    designEnv: "DESIGN ENVIRONMENT",
+    coreCapabilities: "CORE CAPABILITIES",
+    operationalCapabilities: "OPERATIONAL CAPABILITIES — IMPLEMENTED AND IN DEVELOPMENT",
+    validation: "VALIDATION",
+    process: "PROCESS",
+    scope: "SCOPE OF CONTRIBUTION",
+    b1: "01 / THE PROBLEM",
+    b2: "02 / THE SYSTEM",
+    b3: "03 / MY CONTRIBUTION",
+    b4: "04 / ENGINEERING CHALLENGE",
+    b5: "05 / VALIDATION",
+    b6: "06 / TECHNOLOGY & EVIDENCE",
+    openLive: "OPEN THE LIVE APP",
+    privateSystem: "PRIVATE CLIENT SYSTEM — NOT PUBLICLY AVAILABLE",
+    enlarge: "Click to enlarge",
+    enlargeHint: "CLICK AN IMAGE TO SEE IT FULL SIZE",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    close: "Close",
+    educationLabel: "EDUCATION",
+    scopeLabel: "SCOPE",
+    capabilitiesLabel: "KEY CAPABILITIES",
+    problemPhoto: "THE PROBLEM — HOW IT WORKED BEFORE",
+    systemPhoto: "THE SYSTEM",
+    problemHint: "Artifact showing the problem: existing workflow, document or model",
+    systemHint: "System screenshot",
+    recurringPattern: "RECURRING PATTERN",
+    radarNote: "The chart shows the relative emphasis of the areas developed through project work, not a self-assessed level of expertise."
+  },
+  hero: {
+    eyebrow: "SOFTWARE ENGINEER",
+    motto1: "Understand the problem first.",
+    motto2: "Then build the solution.",
+    lead: "I work where requirements, processes, data and technology meet — from understanding a problem and modeling the system to technical decisions, implementation and validation.",
+    annotation: "understand first, then build.",
+    meta: [
+      { label: "EXPERIENCE", text: "Student internship · Academic and team projects · Systems for real business needs" },
+      { label: "RANGE", text: "Analysis · requirements · modeling · system design · architecture · implementation · validation" },
+      { label: "FOCUS", text: "Systems analysis · Solution design · Software engineering" }
+    ]
+  },
+  about: {
+    kicker: "01 — ABOUT",
+    annotation: "the thinking around the code",
+    heading: "First I want to understand what the system needs to solve.",
+    paras: [
+      "I am drawn to problems where the context has to be understood before implementation: who uses the system, how the process works, which rules exist, how the data is connected and where the problem actually sits.",
+      "From that understanding I move to requirements, modeling and solution design, and then to technical decisions, implementation and validation.",
+      "What interests me most is the space between analysis and delivery — being able to contribute to what should be built and how, not only to implementing an already defined solution."
+    ],
+    pull: "I am most interested in roles that combine problem analysis, technical decision-making and implementation rather than treating these as separate activities.",
+    consider: ["Stakeholders", "Processes", "Business rules", "Data", "Constraints", "Dependencies", "Technical options"],
+    education: "2024 — 2026 · Software Development, professional study programme, Faculty of Electrical Engineering, University of Sarajevo — completed.\n2026 — present · Computing and Informatics, third year, Faculty of Electrical Engineering, University of Sarajevo."
+  },
+  profile: {
+    kicker: "02 — ENGINEERING PROFILE",
+    heading: "A profile shaped by different kinds of engineering problems.",
+    lead: "Across projects I have worked on different parts of software development — from the interface and the data, through requirements and system modeling, to architecture, implementation, testing and technical direction. Different projects had different emphases, but the same pattern repeats: understand the problem, structure it, and only then decide how to turn it into a solution.",
+    statement: "Understand → analyze → model → decide → build → validate → improve.",
+    emphasis: ["Systems Thinking", "Analytical Problem Solving", "Requirements & Process Analysis", "System & Solution Design"],
+    radarLabels: ["Systems Thinking", "Analytical Problem Solving", "Requirements & Process Analysis", "System & Solution Design", "Implementation", "Quality & Validation", "Technical Leadership", "Communication & Documentation"]
+  },
+  journey: {
+    kicker: "03 — JOURNEY",
+    heading: "How my view of a software system kept widening.",
+    lead: "From programming fundamentals toward users, data, quality and, finally, complete information systems.",
+    chapters: [
+      { label: "01 — FOUNDATIONS", title: "From logic to structured problem solving", text: "Mathematical and computational logic, programming fundamentals, algorithms and data structures built the basis for breaking a problem apart and structuring a solution before implementing it.", focus: ["Programming Fundamentals", "Algorithms", "Data Structures", "Problem Decomposition"], tech: ["C", "C++"] },
+      { label: "02 — DESIGNING FOR THE USER · 2024", title: "A technical solution has to make sense to the person using it", text: "An individual project focused on organizing information and designing the interface around user needs, applying usability principles, visual hierarchy, heuristics and UI patterns and anti-patterns.", focus: ["User-centered Design", "Usability", "Visual Hierarchy"], tech: ["HTML", "CSS", "JavaScript"] },
+      { label: "03 — DATA", title: "There is a structure beneath the interface", text: "Working with relational databases widened the focus to entities, their relationships, constraints and queries — how a system represents, connects and retrieves information.", focus: ["Relational Modeling", "ER Diagrams", "Query Design"], tech: ["SQL", "SQLite"] },
+      { label: "04 — DATA WAREHOUSE & BI · 2025", title: "Structuring data around the questions it has to answer", text: "A pair project focused on analyzing information needs and translating them into a warehouse model suitable for analytical use and connection to a BI environment.", focus: ["Analysis", "DWH Modeling", "Conceptual Design", "Documentation"], tech: ["SQL", "SQLite", "BI Tooling"] },
+      { label: "05 — SOFTWARE QUALITY", title: "From \"it works\" to \"how do we know it works correctly?\"", text: "Verification, validation, test case design and code review extended implementation with questions of quality, testability and maintainability.", focus: ["Test Case Design", "Verification", "Validation", "Code Review"], tech: ["C#"] }
+    ]
+  },
+  work: {
+    kicker: "04 — SELECTED WORK",
+    heading: "Projects",
+    lead: "Some projects asked for more analysis and modeling, others for implementation, architecture or coordination. Together they show the range of my work, from understanding a problem to delivering a solution. Open a project for its full case study."
+  },
+  cases: {
+    bank: {
+      badge: "PROFESSIONAL EXPERIENCE",
+      kicker: "PROFESSIONAL EXPERIENCE",
+      year: "2026",
+      meta: "Raiffeisen Bank Bosnia and Herzegovina · Agile, Scrum · Nine-member team",
+      method: "Agile · Scrum",
+      title: "Property Valuation Ordering Platform",
+      subtitle: "A platform digitalizing the process of ordering property valuations for a bank.",
+      tags: ["Requirements", "Architecture", "Backend", "Testing", "Security"],
+      radarLabels: ["Solution Architecture", "Technical Leadership", "Backend & Business Logic", "Business to Technical Translation", "Data / Domain Modeling", "Testing & Quality", "Security", "UI/UX"],
+      primary: ["Architecture", "Technical Leadership", "Backend & Business Logic", "Software Quality"],
+      problem: "The property valuation ordering process was spread across separate activities, documents and communication channels. Information about a single order lived in several places at once, which made the process slow to follow and hard to keep consistent.",
+      systemText: "A centralized banking platform for the valuation ordering process, bringing its users, workflows, domain data and business rules into one system. Developed within a nine-member Scrum team.",
+      scope: ["Order request", "Data collection", "Appraiser assignment", "Inspection", "Review", "Decision"],
+      capabilities: [
+        { title: "Valuation order workflow", text: "The lifecycle of a valuation request, from order to decision." },
+        { title: "Role-based workflows", text: "System behaviour and access according to each responsibility." },
+        { title: "Business rules & validation", text: "Domain requirements applied consistently across the process." },
+        { title: "Security & access control", text: "Protecting operations and sensitive information." }
+      ],
+      contribution: "Business requirements analysis, solution architecture on Clean Architecture foundations, backend and business logic, domain modeling, testing and security-aware development, with technical ownership of the decisions in those areas. Technical leadership here means architectural and technical decisions, not people management.",
+      challenge: "Keeping one line of consistency from business requirement to domain model, architecture, implementation, security and tests. A single implementation choice could touch several layers, so decisions had to be judged against the whole solution rather than the task in front of me.",
+      validation: "Unit, integration and end-to-end testing, code review and Scrum iteration, with continuous technical review during implementation.",
+      methods: ["Scrum", "Code review", "Unit testing", "Integration testing", "End-to-end testing"],
+      tech: [".NET", "ASP.NET Core", "Blazor", "PostgreSQL", "EF Core", "CQRS / MediatR", "Keycloak", "xUnit", "Playwright", "bUnit"],
+      photoHint: "System screenshot, if approved for external sharing"
+    },
+    rac: {
+      badge: "REAL BUSINESS DIGITALIZATION",
+      kicker: "REAL BUSINESS DIGITALIZATION",
+      year: "2025 · 2026 —",
+      meta: "Pair project · Real rent-a-car company · Prototype 2025 · Development 2026 — ongoing",
+      team: "PAIR PROJECT",
+      title: "Rent-a-Car Information System",
+      subtitle: "Digitalization of a real operating process.",
+      tags: ["Requirements Engineering", "Process Improvement", "System Design", "UI/UX"],
+      radarLabels: ["Requirements Engineering", "Business Process Analysis", "Process Improvement", "System Design & Architecture", "UI/UX", "Implementation", "Validation & Iteration", "Leadership & Coordination"],
+      primary: ["Requirements Engineering", "Business Process Analysis", "Process Improvement", "System Design"],
+      problem: "The company ran on manual, fragmented operations: vehicles and reservations tracked across spreadsheets, paper, phone calls and chat messages. The same data was entered repeatedly, availability was checked by hand, and reservations could overlap.",
+      systemText: "A centralized rental operations system designed around how the company actually works. It connects customers, vehicles and reservations with the full rental lifecycle and the operational work around it.",
+      scope: ["Customer", "Reservation", "Availability", "Handover", "Active rental", "Return & inspection"],
+      capabilities: [
+        { title: "Fleet management", text: "Vehicles, statuses and availability in one overview." },
+        { title: "Reservations", text: "Reservation management, availability search, fleet calendar and conflict prevention." },
+        { title: "Customer & rental management", text: "Customer records and the complete rental lifecycle." },
+        { title: "Return & damage inspection", text: "Return processing, vehicle condition and damage records." }
+      ],
+      operational: ["Maintenance-aware availability", "Fines management", "Operational alerts", "Document generation", "Audit trail", "Operational overview"],
+      contribution: "Requirements engineering and stakeholder analysis, business process analysis and improvement, system design and architecture, data modeling, UI/UX and prototyping, implementation, validation and iteration, and coordination of the work. Requirements were discovered from actual operations rather than received as a finished specification.",
+      challenge: "Availability cannot be modeled on its own: a vehicle is occupied by reservations, active rentals and maintenance at the same time. Deciding how those states relate, and which parts of the manual process deserved improvement rather than replication, shaped the entire data model.",
+      validation: "Delivered iteratively as an MVP and reviewed with the owner and employees. Their feedback refined the system against the same workflows its requirements came from.",
+      methods: ["Process observation", "Stakeholder discussions", "Prototype", "MVP", "User validation"],
+      tech: ["Figma", "Figma Make"],
+      photoHint: "System screenshot"
+    },
+    taxi: {
+      badge: "SYSTEM ANALYSIS & DESIGN",
+      kicker: "SYSTEM ANALYSIS & DESIGN",
+      year: "2026",
+      meta: "Large team project · Waterfall lifecycle",
+      method: "Waterfall",
+      title: "Taxi Management Information System",
+      subtitle: "End-to-end information-system design and validation.",
+      tags: ["System Modeling", "Requirements", "Documentation", "Feasibility"],
+      radarLabels: ["System Analysis", "Requirements Engineering", "Process Modeling", "Data Modeling", "Technical Documentation", "Feasibility & Solution Analysis", "Presentation & Communication", "Leadership & Team Coordination", "MVP / Concept Validation"],
+      primary: ["System Analysis", "Requirements", "Modeling", "Documentation"],
+      supporting: ["Feasibility Analysis", "Presentation", "Team Coordination", "MVP Validation"],
+      problem: "A taxi service is a web of stakeholders, processes, data and operational rules. The task was to define all of it as one coherent information system instead of a set of isolated activities.",
+      systemText: "A taxi management information system designed end to end: from initial analysis and feasibility through requirements, process and data modeling, system design, documentation and MVP validation.",
+      scope: ["Stakeholders", "Requirements", "Scope", "Feasibility", "Processes", "Data", "System design", "MVP"],
+      capabilities: [
+        { title: "Actors & responsibilities", text: "Who takes part in the service and what each role does." },
+        { title: "Operational processes", text: "How a ride moves from request to completion." },
+        { title: "Information flows", text: "What information the process needs and produces." },
+        { title: "Data relationships", text: "How rides, drivers, vehicles and customers relate." }
+      ],
+      contribution: "System analysis, requirements engineering, process and data modeling, system design, feasibility analysis, technical documentation, presentation and team coordination. Implementation existed through the MVP but was not the defining part of my contribution.",
+      challenge: "Turning a broad real-world domain into a defined system: setting its boundaries, identifying stakeholders and requirements, describing the processes and modeling the information so that all of it worked together.",
+      validation: "Formalized through an extensive SRS and supporting system models, and demonstrated through a functional MVP that validated the concept.",
+      methods: ["SRS", "UML", "Use cases", "ER models", "Process models", "Feasibility analysis", "MVP"],
+      tech: [],
+      photoHint: "System screenshot"
+    },
+    svc: {
+      badge: "AGILE DEVELOPMENT",
+      kicker: "AGILE DEVELOPMENT",
+      year: "2026",
+      meta: "Large team project · Agile, iterative delivery",
+      method: "Agile",
+      title: "Service Intervention Management System",
+      subtitle: "Agile development of a multi-role workflow system.",
+      tags: ["Requirements Elaboration", "Workflow Design", "Implementation", "Technical Leadership"],
+      radarLabels: ["Requirements & User Stories", "Acceptance Criteria", "Workflow / Process Design", "Business Logic", "Implementation", "Technical Leadership", "Team Coordination", "Agile Delivery"],
+      primary: ["Requirements Elaboration", "User Stories & Acceptance Criteria", "Workflow / Process Design", "Business Logic", "Implementation", "Technical Leadership", "Team Coordination"],
+      supporting: ["Security-aware Development", "Agile Documentation", "QA / Testing"],
+      supportingLabel: "ADDITIONAL CONTRIBUTION",
+      problem: "Service interventions involve several users, responsibilities, activities and status changes that have to move through one consistent workflow. The project started from a brief specification rather than a defined solution.",
+      systemText: "An Agile-developed system for managing service interventions: the workflow around each intervention and the interactions of the different user roles throughout it.",
+      scope: ["Initial specification", "Requirements elaboration", "User stories", "Acceptance criteria", "Workflow design", "Business logic", "Implementation", "Iteration"],
+      capabilities: [
+        { title: "Intervention workflow", text: "From request through assignment and execution to completion." },
+        { title: "Role-based responsibilities", text: "What each role sees, decides and does." },
+        { title: "Status & progress", text: "The state of an intervention at any point in the process." },
+        { title: "Assignment & scheduling", text: "Who handles an intervention, and when." }
+      ],
+      contribution: "Requirements elaboration, user stories and acceptance criteria, workflow and process design, business logic design, substantial backend and frontend implementation, technical leadership and team coordination. Security-aware work and QA were supporting contributions.",
+      challenge: "Closing the gap between an incomplete specification and an implementable system. Requirements had to be elaborated, user stories and acceptance criteria written, workflows designed and business rules settled before any of it could become software.",
+      validation: "Developed iteratively through Agile sprints, with acceptance criteria as the concrete basis for deciding whether implemented functionality behaved as intended.",
+      methods: ["Agile", "Product Vision", "User stories", "Acceptance criteria", "Sprint-based development"],
+      tech: [],
+      photoHint: "System screenshot"
+    },
+    dwh: {
+      badge: "ANALYTICAL DATA MODELING",
+      kicker: "ANALYTICAL DATA MODELING",
+      year: "2025",
+      meta: "Pair project · Academic",
+      team: "PAIR PROJECT",
+      title: "Data Warehouse & BI",
+      subtitle: "Structuring data around analytical needs rather than simply storing it.",
+      tags: ["DWH Modeling", "Analysis", "Documentation"],
+      radarLabels: ["DWH Modeling", "Analysis", "Conceptual Design", "Documentation", "Data Modeling", "BI Integration", "SQL Implementation"],
+      primary: ["Analysis", "DWH Modeling", "Conceptual Design", "Documentation"],
+      problem: "Operational data is not automatically useful for analysis. The project explored how data could be reorganized and modeled around analytical needs and decision support.",
+      systemText: "A data-warehouse solution that structures data for analytical use and connects the resulting model to a BI environment.",
+      scope: ["Data analysis", "Warehouse modeling", "Data structuring", "SQL implementation", "BI integration"],
+      capabilities: [],
+      contribution: "A pair project. My main contribution was analysis, warehouse and data modeling, conceptual design and documentation, with SQL implementation and BI integration supporting the proposed solution.",
+      challenge: "Deciding how information should be structured around the questions it needs to answer: which data, which relationships and which warehouse structure make meaningful analysis possible.",
+      validation: "The model was implemented and used in the analytical and BI part of the project, showing that the designed structure supported the intended analysis.",
+      methods: ["Warehouse model", "Documentation", "BI integration"],
+      tech: ["SQL", "SQLite", "BI Tooling"],
+      photoHint: "Reporting view from the BI environment"
+    }
+  },
+
+  skills: {
+    kicker: "05 — ENGINEERING COMPETENCIES",
+    heading: "Range across the whole software development process.",
+    lead: "",
+    groups: [
+      { title: "Analysis & requirements", items: "Problem analysis · Business requirements · Requirements engineering · Process analysis · Systems thinking" },
+      { title: "Modeling & system design", items: "System modeling · Process modeling · Data modeling · Business rules · Solution design · Software architecture" },
+      { title: "Software engineering", items: "Implementation · Backend · Business logic · REST API · Frontend · UI/UX" },
+      { title: "Quality & validation", items: "Testing · Verification · Validation · Code review · Testability · Security awareness" },
+      { title: "Technical leadership & coordination", items: "Technical decisions · Work organization · Task distribution · Technical alignment · Progress tracking" },
+      { title: "Communication", items: "Technical documentation · Structuring information · Presentation design · Presenting solutions" }
+    ],
+    techKicker: "TECHNICAL FOUNDATION",
+    techNote: "Technologies used in academic projects and professional work. Not a claim of expert-level mastery in each.",
+    tech: [
+      { label: "PROGRAMMING", items: ["C#", "C++", "C", "JavaScript"] },
+      { label: "WEB & API", items: ["HTML", "CSS", "REST API"] },
+      { label: "DATA", items: ["SQL", "PostgreSQL", "SQLite"] },
+      { label: "TOOLS", items: ["Git", "Docker", "Jira"] }
+    ]
+  },
+  quality: {
+    kicker: "SOFTWARE QUALITY & VALIDATION",
+    heading: "A knowledge area that shows up inside the project work.",
+    lead: "Developed through coursework and applied in project and professional contexts rather than presented as a project of its own.",
+    areas: ["Unit Testing", "Functional Testing", "Non-functional Testing", "Load Testing", "Stress Testing", "Test Case Design", "Verification", "Validation", "Code Review", "Testable Code"],
+    techLabel: "TECHNOLOGY CONTEXT"
+  },
+  ai: {
+    heading: "AI-assisted engineering",
+    lead: "AI is used as a supporting tool for research, solution exploration, implementation and validation.",
+    items: [
+      { title: "Context & Prompt Design", text: "Providing sufficient constraints and technical context." },
+      { title: "Solution Exploration", text: "Comparing approaches and accelerating research." },
+      { title: "Critical Validation", text: "Reviewing, testing and adapting generated suggestions before integration." }
+    ],
+    closing: "AI accelerates execution; engineering judgment remains responsible for the result."
+  },
+  lead: {
+    heading: "Coordination & communication",
+    blocks: [
+      { title: "TECHNICAL COORDINATION", text: "Experience coordinating project teams of up to 12 members, including work organization, task distribution, technical alignment and progress coordination." },
+      { title: "PRESENTATION & DOCUMENTATION", text: "Experience structuring technical content, preparing project presentations, presenting proposed solutions and documenting complex system concepts." }
+    ]
+  },
+  ach: {
+    kicker: "06 — ACHIEVEMENTS & INITIATIVES",
+    meta: "STARTUP COMPETITION — 2ND PLACE · INTERNATIONAL BURCH UNIVERSITY, SARAJEVO · 2022",
+    title: "Roomy — a startup platform for finding roommates",
+    text1: "As part of a four-member team I developed and presented Roomy, a concept connecting people looking for roommates with those searching for shared accommodation.",
+    text2: "The competition followed a Lean Startup approach: concept development, validation thinking and a pitch presentation. Our team placed second among the participating teams.",
+    strengthened: ["Idea Development", "Problem Framing", "Lean Startup Thinking", "Team Collaboration", "Pitching", "Presentation"]
+  },
+  how: {
+    heading: "From an unclear problem toward a structured solution.",
+    lead: "I do not expect a problem to arrive already broken down into ready tasks. I can contribute most where there is room to analyze, ask questions, model, propose — and then take part in building it.",
+    steps: [
+      { no: "01", title: "Understand", text: "Context · stakeholders · problem · constraints" },
+      { no: "02", title: "Structure", text: "Requirements · processes · data · business rules" },
+      { no: "03", title: "Design", text: "Alternatives · models · architecture · technical decisions" },
+      { no: "04", title: "Build", text: "Implementation · integration · iteration" },
+      { no: "05", title: "Check", text: "Testing · validation · feedback" },
+      { no: "06", title: "Improve", text: "Refactoring · optimization · iteration of process and solution" }
+    ]
+  },
+  dir: {
+    kicker: "07 — NEW HORIZONS",
+    heading: "Building on what I know. Exploring what is coming next.",
+    areasLabel: "WHERE I KEEP DEVELOPING",
+    areas: ["Requirements Engineering", "System & Solution Design", "Software Architecture", "Process Digitalization"],
+    exploreLabel: "WHAT I WANT TO EXPLORE",
+    explore: ["Automation", "Intelligent Systems", "AI-assisted Solutions", "Robotics"],
+    lead: "Automation, intelligent systems and robotics are areas I want to grow into — directions for my knowledge and thinking."
+  },
+  contact: {
+    kicker: "08 — CONTACT",
+    heading: "The best solutions start long before the first line of code.",
+    lead: "",
+    actions: { email: "Write to me", linkedin: "Open profile", github: "See the code" },
+    items: [
+      { label: "agrebic25@gmail.com", href: "mailto:agrebic25@gmail.com" },
+      { label: "LINKEDIN", href: "https://www.linkedin.com/in/amina-grebic/" },
+      { label: "GITHUB", href: "https://github.com/agrebic" }
+    ],
+    quote: "If I had an hour to solve a problem, I'd spend most of it understanding the problem."
+  }
+};
+
+const BS = {
+  roleShort: "SOFTWARE INŽENJER",
+  nav: [
+    { label: "O MENI", href: "#about" },
+    { label: "PROFIL", href: "#profile" },
+    { label: "RAZVOJ", href: "#journey" },
+    { label: "PROJEKTI", href: "#work" },
+    { label: "KOMPETENCIJE", href: "#skills" },
+    { label: "NOVI HORIZONTI", href: "#direction" }
+  ],
+  ui: {
+    contactCta: "KONTAKT",
+    considerLabel: "ŠTA POSMATRAM PRIJE ODLUKE",
+    viewCase: "Otvori studiju slučaja",
+    prev: "Prethodni projekat",
+    next: "Sljedeći projekat",
+    primary: "PRIMARNI DOPRINOS",
+    supporting: "PODRŽAVAJUĆE ISKUSTVO",
+    additional: "DODATNI DOPRINOS",
+    methods: "METODE I ARTEFAKTI",
+    techEnv: "TEHNOLOŠKO OKRUŽENJE",
+    designEnv: "DIZAJN OKRUŽENJE",
+    coreCapabilities: "OSNOVNE FUNKCIONALNOSTI",
+    operationalCapabilities: "OPERATIVNE FUNKCIONALNOSTI — IMPLEMENTIRANO I U RAZVOJU",
+    validation: "VALIDACIJA",
+    process: "PROCES",
+    scope: "OBIM DOPRINOSA",
+    b1: "01 / PROBLEM",
+    b2: "02 / SISTEM",
+    b3: "03 / MOJ DOPRINOS",
+    b4: "04 / INŽENJERSKI IZAZOV",
+    b5: "05 / VALIDACIJA",
+    b6: "06 / TEHNOLOGIJA I DOKAZI",
+    openLive: "OTVORI APLIKACIJU",
+    privateSystem: "PRIVATNI SISTEM KLIJENTA — NIJE JAVNO DOSTUPAN",
+    enlarge: "Klikni za uvećanje",
+    enlargeHint: "KLIK NA SLIKU OTVARA JE U PUNOJ VELIČINI",
+    beforeLabel: "PRIJE",
+    afterLabel: "POSLIJE",
+    close: "Zatvori",
+    educationLabel: "OBRAZOVANJE",
+    scopeLabel: "OPSEG",
+    capabilitiesLabel: "KLJUČNE FUNKCIONALNOSTI",
+    problemPhoto: "PROBLEM — KAKO JE BILO PRIJE",
+    systemPhoto: "SISTEM",
+    problemHint: "Artefakt koji prikazuje problem: postojeći tok rada, dokument ili model",
+    systemHint: "Snimak sistema",
+    recurringPattern: "PONAVLJAJUĆI OBRAZAC",
+    radarNote: "Grafik prikazuje relativni naglasak oblasti razvijanih kroz rad na projektima, a ne samoprocijenjeni nivo stručnosti."
+  },
+  hero: {
+    eyebrow: "SOFTVER INŽENJER",
+    motto1: "Prvo razumjeti problem.",
+    motto2: "Onda graditi rješenje.",
+    lead: "Radim na spoju zahtjeva, procesa, podataka i tehnologije — od razumijevanja problema i modeliranja sistema, preko tehničkih odluka i implementacije, do validacije rješenja.",
+    annotation: "prvo razumjeti, onda graditi.",
+    meta: [
+      { label: "ISKUSTVO", text: "Studentska praksa · Akademski i timski projekti · Projekti za stvarne poslovne potrebe" },
+      { label: "OPSEG", text: "Analiza · zahtjevi · modeliranje · dizajn sistema · arhitektura · implementacija · validacija" },
+      { label: "FOKUS", text: "Analiza sistema · Dizajn rješenja · Softversko inženjerstvo" }
+    ]
+  },
+  about: {
+    kicker: "01 — O MENI",
+    annotation: "razmišljanje oko koda",
+    heading: "Prvo želim razumjeti šta sistem treba riješiti.",
+    paras: [
+      "Zanimaju me problemi kod kojih prije implementacije treba razumjeti kontekst: ko koristi sistem, kako proces funkcioniše, koja pravila postoje, kako su podaci povezani i gdje se zapravo nalazi problem.",
+      "Iz tog razumijevanja prelazim na zahtjeve, modeliranje i dizajn rješenja, a zatim na tehničke odluke, implementaciju i validaciju.",
+      "Najviše me privlači prostor između analize i realizacije — mogućnost da doprinesem i tome šta treba izgraditi i kako, a ne samo implementaciji već definisanog rješenja."
+    ],
+    pull: "Najviše me zanimaju pozicije koje povezuju analizu problema, tehničko odlučivanje i implementaciju, umjesto da ih tretiraju kao odvojene aktivnosti.",
+    consider: ["Stakeholderi", "Procesi", "Poslovna pravila", "Podaci", "Ograničenja", "Zavisnosti", "Tehničke opcije"],
+    education: "2024 — 2026 · Razvoj softvera, stručni studij, Elektrotehnički fakultet Univerziteta u Sarajevu — završeno.\n2026 — danas · Računarstvo i informatika, 3. godina, Elektrotehnički fakultet Univerziteta u Sarajevu."
+  },
+  profile: {
+    kicker: "02 — INŽENJERSKI PROFIL",
+    heading: "Profil oblikovan kroz različite vrste inženjerskih problema.",
+    lead: "Kroz projekte sam radila na različitim dijelovima razvoja softvera — od korisničkog interfejsa i podataka, preko zahtjeva i modeliranja sistema, do arhitekture, implementacije, testiranja i tehničkog vođenja. Različiti projekti imali su različite naglaske, ali kroz njih se ponavlja isti obrazac: razumjeti problem, strukturirati ga i tek onda odlučiti kako ga pretvoriti u rješenje.",
+    statement: "Razumjeti → analizirati → modelirati → odlučiti → izgraditi → validirati → unaprijediti.",
+    emphasis: ["Sistemsko razmišljanje", "Analitičko rješavanje problema", "Analiza zahtjeva i procesa", "Dizajn sistema i rješenja"],
+    radarLabels: ["Sistemsko razmišljanje", "Analitičko rješavanje problema", "Analiza zahtjeva i procesa", "Dizajn sistema i rješenja", "Implementacija", "Kvalitet i validacija", "Tehničko vođenje", "Komunikacija i dokumentacija"]
+  },
+  journey: {
+    kicker: "03 — RAZVOJ",
+    heading: "Kako se širio moj pogled na softverski sistem.",
+    lead: "Od programerskih osnova prema korisnicima, podacima, kvalitetu i konačno cjelovitim informacionim sistemima.",
+    chapters: [
+      { label: "01 — OSNOVE", title: "Od logike do strukturiranog rješavanja problema", text: "Matematička i računarska logika, osnove programiranja, algoritmi i strukture podataka postavili su temelj za razlaganje problema i strukturiranje rješenja prije njegove implementacije.", focus: ["Osnove programiranja", "Algoritmi", "Strukture podataka", "Dekompozicija problema"], tech: ["C", "C++"] },
+      { label: "02 — DIZAJN ZA KORISNIKA · 2024", title: "Tehničko rješenje mora imati smisla i osobi koja ga koristi", text: "Individualni projekat usmjeren na organizaciju informacija i dizajn interfejsa prema potrebama korisnika, uz primjenu principa upotrebljivosti, vizuelne hijerarhije, heuristika te UI obrazaca i anti-obrazaca.", focus: ["Dizajn usmjeren na korisnika", "Upotrebljivost", "Vizuelna hijerarhija"], tech: ["HTML", "CSS", "JavaScript"] },
+      { label: "03 — PODACI", title: "Ispod interfejsa postoji struktura", text: "Rad s relacijskim bazama proširio je fokus na entitete, njihove odnose, ograničenja i upite — odnosno na način na koji sistem predstavlja, povezuje i pronalazi informacije.", focus: ["Relacijsko modeliranje", "ER dijagrami", "Dizajn upita"], tech: ["SQL", "SQLite"] },
+      { label: "04 — SKLADIŠTE PODATAKA I BI · 2025", title: "Strukturirati podatke prema pitanjima na koja trebaju odgovoriti", text: "Projekat u paru usmjeren na analizu informacijskih potreba i njihovo prevođenje u model skladišta podataka pogodan za analitičku upotrebu i povezivanje s BI okruženjem.", focus: ["Analiza", "Modeliranje skladišta", "Konceptualni dizajn", "Dokumentacija"], tech: ["SQL", "SQLite", "BI alati"] },
+      { label: "05 — KVALITET SOFTVERA", title: "Od „radi“ prema „kako znamo da radi ispravno?“", text: "Verifikacija, validacija, dizajn test slučajeva i code review proširili su implementaciju pitanjima kvaliteta, testabilnosti i održivosti softvera.", focus: ["Dizajn test slučajeva", "Verifikacija", "Validacija", "Code review"], tech: ["C#"] }
+    ]
+  },
+  work: {
+    kicker: "04 — ODABRANI PROJEKTI",
+    heading: "Projekti",
+    lead: "Neki projekti tražili su više analize i modeliranja, drugi implementacije, arhitekture ili koordinacije. Zajedno pokazuju širinu mog rada od razumijevanja problema do realizacije rješenja. Klik na projekat otvara punu studiju slučaja."
+  },
+  cases: {
+    bank: {
+      badge: "PROFESIONALNO ISKUSTVO",
+      kicker: "PROFESIONALNO ISKUSTVO",
+      year: "2026",
+      meta: "Raiffeisen Bank Bosna i Hercegovina · Agile, Scrum · Tim od devet članova",
+      method: "Agile · Scrum",
+      title: "Platforma za naručivanje procjene nekretnina",
+      subtitle: "Platforma za digitalizaciju procesa narudžbe procjene nekretnina za banku.",
+      tags: ["Zahtjevi", "Arhitektura", "Backend", "Testiranje", "Sigurnost"],
+      radarLabels: ["Arhitektura rješenja", "Tehničko vođenje", "Backend i poslovna logika", "Prevod poslovnog u tehničko", "Modeliranje domena", "Testiranje i kvalitet", "Sigurnost", "UI/UX"],
+      primary: ["Arhitektura", "Tehničko vođenje", "Backend i poslovna logika", "Kvalitet softvera"],
+      problem: "Proces naručivanja procjene nekretnina bio je raspršen po odvojenim aktivnostima, dokumentima i kanalima komunikacije. Informacije o jednom zahtjevu nalazile su se na nekoliko mjesta istovremeno, što je proces činilo sporim za praćenje i teškim za održavanje konzistentnosti.",
+      systemText: "Centralizovana bankarska platforma za proces naručivanja procjene, koja korisnike, tokove rada, domenske podatke i poslovna pravila objedinjuje u jedan sistem. Razvijana u Scrum timu od devet članova.",
+      scope: ["Zahtjev za nalog", "Prikupljanje podataka", "Dodjela procjenitelja", "Uvid i pregled", "Kontrola", "Odluka"],
+      capabilities: [
+        { title: "Tok naloga za procjenu", text: "Životni ciklus zahtjeva, od naloga do odluke." },
+        { title: "Tokovi po ulogama", text: "Ponašanje sistema i pristup prema odgovornostima." },
+        { title: "Poslovna pravila i validacija", text: "Domenski zahtjevi primijenjeni konzistentno kroz proces." },
+        { title: "Sigurnost i kontrola pristupa", text: "Zaštita operacija i osjetljivih informacija." }
+      ],
+      contribution: "Analiza poslovnih zahtjeva, arhitektura rješenja na osnovama Clean Architecture, backend i poslovna logika, modeliranje domena, testiranje i sigurnosno svjestan razvoj, uz tehničku odgovornost za odluke u tim oblastima. Tehničko vođenje ovdje znači arhitekturne i tehničke odluke, ne upravljanje ljudima.",
+      challenge: "Održati jednu liniju konzistentnosti od poslovnog zahtjeva do modela domena, arhitekture, implementacije, sigurnosti i testova. Jedna implementacijska odluka mogla je dotaknuti nekoliko slojeva, pa se procjenjivala u odnosu na cjelinu rješenja, a ne samo na zadatak.",
+      validation: "Unit, integracijsko i end-to-end testiranje, code review i Scrum iteracije, uz kontinuirani tehnički pregled tokom implementacije.",
+      methods: ["Scrum", "Code review", "Unit testiranje", "Integracijsko testiranje", "End-to-end testiranje"],
+      tech: [".NET", "ASP.NET Core", "Blazor", "PostgreSQL", "EF Core", "CQRS / MediatR", "Keycloak", "xUnit", "Playwright", "bUnit"],
+      photoHint: "Snimak sistema, ako je odobreno za vanjsko dijeljenje"
+    },
+    rac: {
+      badge: "DIGITALIZACIJA STVARNOG POSLOVANJA",
+      kicker: "DIGITALIZACIJA POSLOVANJA",
+      year: "2025 · 2026 —",
+      meta: "Projekat u paru · Stvarna rent-a-car agencija · Prototip 2025 · Razvoj 2026 — u toku",
+      team: "PROJEKAT U PARU",
+      title: "Informacioni sistem rent-a-car agencije",
+      subtitle: "Digitalizacija stvarnog operativnog procesa.",
+      tags: ["Inženjerstvo zahtjeva", "Unapređenje procesa", "Dizajn sistema", "UI/UX"],
+      radarLabels: ["Inženjerstvo zahtjeva", "Analiza poslovnih procesa", "Unapređenje procesa", "Dizajn sistema i arhitektura", "UI/UX", "Implementacija", "Validacija i iteracija", "Vođenje i koordinacija"],
+      primary: ["Inženjerstvo zahtjeva", "Analiza poslovnih procesa", "Unapređenje procesa", "Dizajn sistema"],
+      problem: "Agencija je poslovala ručno i raspršeno: vozila i rezervacije vodile su se kroz Excel tabele, papir, pozive i poruke. Isti podaci unosili su se više puta, dostupnost se provjeravala ručno, a rezervacije su se mogle preklapati.",
+      systemText: "Centralizovan sistem za upravljanje najmom, oblikovan prema tome kako agencija zaista radi. Povezuje klijente, vozila i rezervacije s cjelovitim životnim ciklusom najma i operativnim radom oko njega.",
+      scope: ["Klijent", "Rezervacija", "Dostupnost", "Preuzimanje", "Aktivni najam", "Vraćanje i pregled"],
+      capabilities: [
+        { title: "Upravljanje flotom", text: "Vozila, statusi i dostupnost na jednom mjestu." },
+        { title: "Rezervacije", text: "Upravljanje rezervacijama, pretraga dostupnosti, kalendar flote i sprječavanje preklapanja." },
+        { title: "Klijenti i najmovi", text: "Evidencija klijenata i kompletan životni ciklus najma." },
+        { title: "Vraćanje i pregled šteta", text: "Obrada vraćanja, stanje vozila i evidencija šteta." }
+      ],
+      operational: ["Dostupnost uz servisiranje", "Upravljanje kaznama", "Operativna obavještenja", "Generisanje dokumenata", "Audit trail", "Operativni pregled"],
+      contribution: "Inženjerstvo zahtjeva i analiza stakeholdera, analiza i unapređenje poslovnih procesa, dizajn sistema i arhitektura, modeliranje podataka, UI/UX i prototipiranje, implementacija, validacija i iteracija, te koordinacija rada. Zahtjevi su otkrivani iz stvarnog poslovanja, a ne dobijeni kao gotova specifikacija.",
+      challenge: "Dostupnost se ne može modelirati izolovano: vozilo je istovremeno zauzeto rezervacijama, aktivnim najmovima i servisiranjem. Odluka o tome kako se ta stanja odnose, i koje dijelove ručnog procesa treba unaprijediti a ne preslikati, oblikovala je cijeli model podataka.",
+      validation: "Rješenje je razvijano iterativno kao MVP i pregledano s vlasnikom i zaposlenicima. Njihove povratne informacije koristile su se za unapređenje sistema u odnosu na iste tokove rada iz kojih su zahtjevi i nastali.",
+      methods: ["Posmatranje procesa", "Razgovori sa stakeholderima", "Prototip", "MVP", "Validacija s korisnicima"],
+      tech: ["Figma", "Figma Make"],
+      photoHint: "Snimak sistema"
+    },
+    taxi: {
+      badge: "ANALIZA I DIZAJN SISTEMA",
+      kicker: "ANALIZA I DIZAJN SISTEMA",
+      year: "2026",
+      meta: "Veliki timski projekat · Waterfall životni ciklus",
+      method: "Waterfall",
+      title: "Informacioni sistem taxi službe",
+      subtitle: "Dizajn i validacija informacionog sistema od analize do koncepta rješenja.",
+      tags: ["Modeliranje sistema", "Zahtjevi", "Dokumentacija", "Izvodljivost"],
+      radarLabels: ["Analiza sistema", "Inženjerstvo zahtjeva", "Modeliranje procesa", "Modeliranje podataka", "Tehnička dokumentacija", "Analiza izvodljivosti", "Prezentacija i komunikacija", "Vođenje i koordinacija tima", "MVP / validacija koncepta"],
+      primary: ["Analiza sistema", "Zahtjevi", "Modeliranje", "Dokumentacija"],
+      supporting: ["Analiza izvodljivosti", "Prezentacija", "Koordinacija tima", "Validacija MVP-a"],
+      problem: "Taxi služba je mreža stakeholdera, procesa, podataka i operativnih pravila. Zadatak je bio sve to definisati kao jedan koherentan informacioni sistem, a ne kao skup izolovanih aktivnosti.",
+      systemText: "Informacioni sistem taxi službe projektovan od početka do kraja: od početne analize i izvodljivosti, kroz zahtjeve, modeliranje procesa i podataka, dizajn sistema i dokumentaciju, do validacije kroz MVP.",
+      scope: ["Stakeholderi", "Zahtjevi", "Opseg", "Izvodljivost", "Procesi", "Podaci", "Dizajn sistema", "MVP"],
+      capabilities: [
+        { title: "Aktori i odgovornosti", text: "Ko učestvuje u usluzi i šta svaka uloga radi." },
+        { title: "Operativni procesi", text: "Kako vožnja ide od zahtjeva do završetka." },
+        { title: "Tokovi informacija", text: "Koje informacije proces zahtijeva i koje stvara." },
+        { title: "Veze podataka", text: "Kako su vožnje, vozači, vozila i putnici povezani." }
+      ],
+      contribution: "Analiza sistema, inženjerstvo zahtjeva, modeliranje procesa i podataka, dizajn sistema, analiza izvodljivosti, tehnička dokumentacija, prezentacija i koordinacija tima. Implementacija je postojala kroz MVP, ali nije bila definišući dio mog doprinosa.",
+      challenge: "Pretvoriti široku stvarnu domenu u definisan sistem: postaviti granice, prepoznati stakeholdere i zahtjeve, opisati procese i modelirati informacije tako da sve to funkcioniše zajedno.",
+      validation: "Rješenje je formalizovano kroz obiman SRS i prateće modele sistema, a demonstrirano funkcionalnim MVP-om koji je potvrdio koncept.",
+      methods: ["SRS", "UML", "Use case modeli", "ER modeli", "Procesni modeli", "Analiza izvodljivosti", "MVP"],
+      tech: [],
+      photoHint: "Snimak sistema"
+    },
+    svc: {
+      badge: "AGILNI RAZVOJ",
+      kicker: "AGILNI RAZVOJ",
+      year: "2026",
+      meta: "Veliki timski projekat · Agile, iterativna dostava",
+      method: "Agile",
+      title: "Sistem za upravljanje servisnim intervencijama",
+      subtitle: "Agilni razvoj sistema s više korisničkih uloga.",
+      tags: ["Razrada zahtjeva", "Dizajn workflowa", "Implementacija", "Tehničko vođenje"],
+      radarLabels: ["Zahtjevi i user stories", "Kriteriji prihvatanja", "Dizajn workflowa i procesa", "Poslovna logika", "Implementacija", "Tehničko vođenje", "Koordinacija tima", "Agilna dostava"],
+      primary: ["Razrada zahtjeva", "User stories i kriteriji prihvatanja", "Dizajn workflowa i procesa", "Poslovna logika", "Implementacija", "Tehničko vođenje", "Koordinacija tima"],
+      supporting: ["Sigurnosno svjestan razvoj", "Agilna dokumentacija", "QA / testiranje"],
+      supportingLabel: "DODATNI DOPRINOS",
+      problem: "Servisne intervencije uključuju više korisnika, odgovornosti, aktivnosti i promjena statusa koje moraju prolaziti kroz jedan konzistentan tok rada. Projekat je počeo od kratke specifikacije, a ne od definisanog rješenja.",
+      systemText: "Agilno razvijan sistem za upravljanje servisnim intervencijama: tok rada oko svake intervencije i interakcije različitih korisničkih uloga kroz taj proces.",
+      scope: ["Početna specifikacija", "Razrada zahtjeva", "User stories", "Kriteriji prihvatanja", "Dizajn workflowa", "Poslovna logika", "Implementacija", "Iteracija"],
+      capabilities: [
+        { title: "Tok intervencije", text: "Od prijave, kroz dodjelu i izvođenje, do završetka." },
+        { title: "Odgovornosti po ulogama", text: "Šta svaka uloga vidi, odlučuje i radi." },
+        { title: "Status i napredak", text: "Stanje intervencije u svakom trenutku procesa." },
+        { title: "Dodjela i planiranje", text: "Ko rješava intervenciju i kada." }
+      ],
+      contribution: "Razrada zahtjeva, user stories i kriteriji prihvatanja, dizajn workflowa i procesa, dizajn poslovne logike, značajna backend i frontend implementacija, tehničko vođenje i koordinacija tima. Sigurnosno svjestan rad i QA bili su podržavajući doprinosi.",
+      challenge: "Premostiti razliku između nepotpune specifikacije i implementabilnog sistema. Zahtjeve je trebalo razraditi, napisati user stories i kriterije prihvatanja, dizajnirati tokove rada i utvrditi poslovna pravila prije nego što je sve to moglo postati softver.",
+      validation: "Razvoj je vođen iterativno kroz agilne sprintove, uz kriterije prihvatanja kao konkretnu osnovu za procjenu da li implementirana funkcionalnost radi kako je predviđeno.",
+      methods: ["Agile", "Product Vision", "User stories", "Kriteriji prihvatanja", "Razvoj po sprintovima"],
+      tech: [],
+      photoHint: "Snimak sistema"
+    },
+    dwh: {
+      badge: "ANALITIČKO MODELIRANJE PODATAKA",
+      kicker: "MODELIRANJE PODATAKA",
+      year: "2025",
+      meta: "Projekat u paru · Akademski",
+      team: "PROJEKAT U PARU",
+      title: "Skladište podataka i BI",
+      subtitle: "Strukturiranje podataka prema analitičkim potrebama, a ne samo njihovo čuvanje.",
+      tags: ["Modeliranje skladišta", "Analiza", "Dokumentacija"],
+      radarLabels: ["Modeliranje skladišta", "Analiza", "Konceptualni dizajn", "Dokumentacija", "Modeliranje podataka", "BI integracija", "SQL implementacija"],
+      primary: ["Analiza", "Modeliranje skladišta", "Konceptualni dizajn", "Dokumentacija"],
+      problem: "Operativni podaci nisu automatski korisni za analizu. Projekat je istražio kako podatke reorganizovati i modelirati prema analitičkim potrebama i podršci odlučivanju.",
+      systemText: "Rješenje skladišta podataka koje strukturira podatke za analitičku upotrebu i povezuje nastali model s BI okruženjem.",
+      scope: ["Analiza podataka", "Modeliranje skladišta", "Strukturiranje podataka", "SQL implementacija", "BI integracija"],
+      capabilities: [],
+      contribution: "Projekat u paru. Moj glavni doprinos bio je analiza, modeliranje skladišta i podataka, konceptualni dizajn i dokumentacija, dok su SQL implementacija i BI integracija podržavale predloženo rješenje.",
+      challenge: "Odlučiti kako informacije strukturirati u odnosu na pitanja na koja treba odgovoriti: koji podaci, koje veze i koja struktura skladišta omogućavaju smislenu analizu.",
+      validation: "Model je implementiran i korišten u analitičkom i BI dijelu projekta, što je pokazalo da predložena struktura podržava predviđenu analizu.",
+      methods: ["Model skladišta", "Dokumentacija", "BI integracija"],
+      tech: ["SQL", "SQLite", "BI alati"],
+      photoHint: "Prikaz izvještaja u BI okruženju"
+    }
+  },
+
+  skills: {
+    kicker: "05 — INŽENJERSKE KOMPETENCIJE",
+    heading: "Širina kroz cijeli proces razvoja softvera.",
+    lead: "",
+    groups: [
+      { title: "Analiza i zahtjevi", items: "Analiza problema · Poslovni zahtjevi · Inženjerstvo zahtjeva · Analiza procesa · Sistemsko razmišljanje" },
+      { title: "Modeliranje i dizajn sistema", items: "Modeliranje sistema · Modeliranje procesa · Modeliranje podataka · Poslovna pravila · Dizajn rješenja · Softverska arhitektura" },
+      { title: "Softversko inženjerstvo", items: "Implementacija · Backend · Poslovna logika · REST API · Frontend · UI/UX" },
+      { title: "Kvalitet i validacija", items: "Testiranje · Verifikacija · Validacija · Code review · Testabilnost · Sigurnosna svjesnost" },
+      { title: "Tehničko vođenje i koordinacija", items: "Tehničko odlučivanje · Organizacija rada · Podjela zadataka · Tehničko usklađivanje · Praćenje realizacije" },
+      { title: "Komunikacija", items: "Tehnička dokumentacija · Strukturiranje informacija · Dizajn prezentacija · Prezentovanje rješenja" }
+    ],
+    techKicker: "TEHNIČKA OSNOVA",
+    techNote: "Tehnologije korištene u akademskim projektima i profesionalnom radu. Nije tvrdnja o ekspertskom nivou u svakoj od njih.",
+    tech: [
+      { label: "PROGRAMIRANJE", items: ["C#", "C++", "C", "JavaScript"] },
+      { label: "WEB I API", items: ["HTML", "CSS", "REST API"] },
+      { label: "PODACI", items: ["SQL", "PostgreSQL", "SQLite"] },
+      { label: "ALATI", items: ["Git", "Docker", "Jira"] }
+    ]
+  },
+  quality: {
+    kicker: "KVALITET I VALIDACIJA SOFTVERA",
+    heading: "Oblast znanja koja se ogleda kroz projektni rad.",
+    lead: "Razvijena kroz akademski rad i primijenjena u projektnom i profesionalnom kontekstu, umjesto da bude predstavljena kao zaseban projekat.",
+    areas: ["Unit testiranje", "Funkcionalno testiranje", "Nefunkcionalno testiranje", "Load testiranje", "Stress testiranje", "Dizajn test slučajeva", "Verifikacija", "Validacija", "Code review", "Testabilan kod"],
+    techLabel: "TEHNOLOŠKI KONTEKST"
+  },
+  ai: {
+    heading: "AI-potpomognuto inženjerstvo",
+    lead: "AI koristim kao pomoćni alat za istraživanje, ispitivanje rješenja, implementaciju i validaciju.",
+    items: [
+      { title: "Kontekst i dizajn prompta", text: "Definisanje dovoljnih ograničenja i tehničkog konteksta." },
+      { title: "Ispitivanje rješenja", text: "Poređenje pristupa i ubrzavanje istraživanja." },
+      { title: "Kritička validacija", text: "Pregled, testiranje i prilagođavanje predloženog prije integracije." }
+    ],
+    closing: "AI ubrzava izvođenje; inženjerska procjena ostaje odgovorna za rezultat."
+  },
+  lead: {
+    heading: "Koordinacija i komunikacija",
+    blocks: [
+      { title: "TEHNIČKA KOORDINACIJA", text: "Iskustvo u koordinaciji projektnih timova do 12 članova, uključujući organizaciju rada, podjelu zadataka, tehničko usklađivanje i praćenje napretka." },
+      { title: "PREZENTACIJA I DOKUMENTACIJA", text: "Iskustvo u strukturiranju tehničkog sadržaja, pripremi projektnih prezentacija, prezentovanju predloženih rješenja i dokumentovanju kompleksnih sistemskih koncepata." }
+    ]
+  },
+  ach: {
+    kicker: "06 — PRIZNANJA I INICIJATIVE",
+    meta: "STARTUP TAKMIČENJE — 2. MJESTO · INTERNATIONAL BURCH UNIVERSITY, SARAJEVO · 2022",
+    title: "Roomy — startup platforma za pronalaženje cimera",
+    text1: "U timu od četiri člana razvila sam i predstavila Roomy, koncept koji povezuje ljude koji traže cimera s onima koji traže zajednički smještaj.",
+    text2: "Takmičenje je vođeno po Lean Startup pristupu: razvoj koncepta, razmišljanje o validaciji i pitch prezentacija. Naš tim osvojio je drugo mjesto među prijavljenim timovima.",
+    strengthened: ["Razvoj ideje", "Definisanje problema", "Lean Startup pristup", "Timski rad", "Pitch", "Prezentacija"]
+  },
+  how: {
+    heading: "Od nejasnog problema prema strukturiranom rješenju.",
+    lead: "Ne očekujem da problem dođe već razložen na gotove taskove. Najviše vrijednosti mogu dati kada postoji prostor da analiziram, postavljam pitanja, modeliram, predlažem i zatim učestvujem u realizaciji.",
+    steps: [
+      { no: "01", title: "Razumjeti", text: "Kontekst · stakeholderi · problem · ograničenja" },
+      { no: "02", title: "Strukturirati", text: "Zahtjevi · procesi · podaci · poslovna pravila" },
+      { no: "03", title: "Osmisliti", text: "Alternative · modeli · arhitektura · tehničke odluke" },
+      { no: "04", title: "Izgraditi", text: "Implementacija · integracija · iteracija" },
+      { no: "05", title: "Provjeriti", text: "Testiranje · validacija · feedback" },
+      { no: "06", title: "Unaprijediti", text: "Refactoring · optimizacija · iteracija procesa i rješenja" }
+    ]
+  },
+  dir: {
+    kicker: "07 — NOVI HORIZONTI",
+    heading: "Graditi na onome što znam. Istraživati ono što tek dolazi.",
+    areasLabel: "GDJE SE DALJE RAZVIJAM",
+    areas: ["Inženjerstvo zahtjeva", "Dizajn sistema i rješenja", "Softverska arhitektura", "Digitalizacija procesa"],
+    exploreLabel: "ŠTA ŽELIM ISTRAŽIVATI",
+    explore: ["Automatizacija", "Inteligentni sistemi", "AI-assisted rješenja", "Robotika"],
+    lead: "Automatizacija, inteligentni sistemi i robotika predstavljaju oblasti prema kojima želim širiti svoje znanje i način razmišljanja."
+  },
+  contact: {
+    kicker: "08 — KONTAKT",
+    heading: "Najbolja rješenja počinju mnogo prije prve linije koda.",
+    lead: "",
+    actions: { email: "Pošalji poruku", linkedin: "Otvori profil", github: "Pogledaj kod" },
+    items: [
+      { label: "agrebic25@gmail.com", href: "mailto:agrebic25@gmail.com" },
+      { label: "LINKEDIN", href: "https://www.linkedin.com/in/amina-grebic/" },
+      { label: "GITHUB", href: "https://github.com/agrebic" }
+    ],
+    quote: "Da imam sat vremena da riješim problem, većinu bih potrošio na razumijevanje samog problema."
+  }
+};
+
+const PROBLEM_SHOTS = {
+  bank: ["assets/bank-before.png"],
+  rac: ["assets/rac-before.png"],
+  taxi: ["assets/taxi-before.png"],
+  svc: ["assets/svc-before.png"]
+};
+
+const SYSTEM_SHOTS = {
+  bank: ["assets/bank-1.png", "assets/bank-2.png", "assets/bank-3.png", "assets/bank-4.png", "assets/bank-praksa.jpg"],
+  rac: ["assets/rac-1.png", "assets/rac-2.png", "assets/rac-3.png"],
+  taxi: ["assets/taxi-1.png", "assets/taxi-2.png", "assets/taxi-3.png"],
+  svc: ["assets/svc-1.png", "assets/svc-2.png", "assets/svc-3.png"],
+  dwh: ["assets/dwh.png"]
+};
+
+const CARD_SHOTS = {
+  bank: "assets/bank-2.png",
+  rac: "assets/rac-1.png",
+  taxi: "assets/taxi-1.png",
+  svc: "assets/svc-1.png",
+  dwh: "assets/dwh.png"
+};
+
+const AFTER_SHOTS = {
+  bank: "assets/bank-after.png",
+  rac: "assets/rac-after.png",
+  taxi: "assets/taxi-after.png",
+  svc: "assets/svc-after.png"
+};
+
+const LIVE_LINKS = {
+  svc: "https://nrs-grupa2.vercel.app/",
+  taxi: "https://taxi-app-pied.vercel.app/welcome"
+};
+
+const PRIVATE_CASES = ["bank", "rac"];
+
+const ORDER = ["bank", "rac", "taxi", "svc", "dwh"];
+
+function buildRadar(labels, values, tone, showLabels) {
+  labels = labels || [];
+  values = values || [];
+  const dark = tone === "dark";
+  const inset = showLabels ? 19 : 4;
+  const span = 100 - inset * 2;
+  const cx = 160, cy = 160, R = 112;
+  const n = Math.max(labels.length, 1);
+  const at = (i, r) => {
+    const a = (-90 + i * 360 / n) * Math.PI / 180;
+    return { x: +(cx + r * Math.cos(a)).toFixed(1), y: +(cy + r * Math.sin(a)).toFixed(1), c: Math.cos(a), s: Math.sin(a) };
+  };
+  const polyAt = r => labels.map((_, i) => { const p = at(i, r); return p.x + "," + p.y; }).join(" ");
+  const wrap = (text, max) => {
+    const words = String(text).split(" ");
+    const lines = [];
+    let cur = "";
+    words.forEach(w => {
+      if (!cur) cur = w;
+      else if ((cur + " " + w).length <= max) cur += " " + w;
+      else { lines.push(cur); cur = w; }
+    });
+    if (cur) lines.push(cur);
+    return lines;
+  };
+  const points = values.map((v, i) => at(i, R * Math.max(0.15, Math.min(1, v / 5))));
+  const labelColor = dark ? "rgba(250,247,240,.82)" : "#45566a";
+  const ring = showLabels ? 27.5 : 0;
+  const tags = showLabels ? labels.map((text, i) => {
+    const p = at(i, R);
+    const left = +(50 + p.c * ring).toFixed(2);
+    const top = +(50 + p.s * ring).toFixed(2);
+    const tx = p.c > 0.35 ? "0" : (p.c < -0.35 ? "-100%" : "-50%");
+    const ty = p.s < -0.45 ? "-100%" : (p.s > 0.45 ? "0" : "-50%");
+    return {
+      text: wrap(text, 18).join(" "),
+      style: "position: absolute; left: " + left + "%; top: " + top + "%; transform: translate(" + tx + ", " + ty + ");"
+        + " width: max-content; max-width: 29%; text-align: " + (tx === "0" ? "left" : (tx === "-100%" ? "right" : "center")) + ";"
+        + " font-family: 'IBM Plex Mono', monospace; font-size: clamp(8.5px, 1vw, 11px); line-height: 1.35; letter-spacing: .02em; color: " + labelColor
+    };
+  }) : [];
+  return {
+    rings: [0.25, 0.5, 0.75, 1].map((k, i) => ({ poly: polyAt(R * k), w: i === 3 ? 1.4 : 1 })),
+    axes: labels.map((_, i) => at(i, R)),
+    points, tags,
+    shape: points.map(p => p.x + "," + p.y).join(" "),
+    svgStyle: "position: absolute; left: " + inset + "%; top: " + inset + "%; width: " + span + "%; height: " + span + "%; display: block; overflow: visible",
+    gridColor: dark ? "rgba(250,247,240,.24)" : "rgba(22,55,94,.2)",
+    dotStroke: dark ? "#16375e" : "#faf7f0"
+  };
+}
+
+class Component extends DCLogic {
+  state = { lang: "bs", openCase: null, zoom: null };
+
+  componentDidMount() {
+    try {
+      const saved = window.localStorage.getItem("ag-portfolio-lang");
+      if (saved === "en" || saved === "bs") this.setState({ lang: saved });
+    } catch (e) {}
+
+    this._onKey = e => { if (e.key === "Escape") this.close(); };
+    window.addEventListener("keydown", this._onKey);
+
+    const links = Array.from(document.querySelectorAll("[data-spy]"));
+    const onScroll = () => {
+      let current = "";
+      links.forEach(a => {
+        const el = document.querySelector(a.getAttribute("href"));
+        if (el && el.getBoundingClientRect().top <= 170) current = el.id;
+      });
+      links.forEach(a => {
+        const on = a.getAttribute("href") === "#" + current;
+        a.style.color = on ? "#f0b429" : "rgba(250,247,240,.7)";
+        a.style.borderBottomColor = on ? "#f0b429" : "transparent";
+      });
+    };
+    this._onScroll = onScroll;
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener("scroll", this._onScroll);
+    if (this._onKey) window.removeEventListener("keydown", this._onKey);
+    document.documentElement.style.overflow = "";
+  }
+
+  open(key) {
+    this.setState({ openCase: key });
+    document.documentElement.style.overflow = "hidden";
+  }
+
+  close() {
+    if (this.state.zoom) { this.setState({ zoom: null }); return; }
+    if (!this.state.openCase) return;
+    this.setState({ openCase: null });
+    document.documentElement.style.overflow = "";
+  }
+
+  pick(lang) {
+    this.setState({ lang });
+    try { window.localStorage.setItem("ag-portfolio-lang", lang); } catch (e) {}
+  }
+
+  scrollRail(dir) {
+    const rail = document.getElementById("work-rail");
+    if (!rail) return;
+    const card = rail.querySelector("button");
+    const step = card ? card.getBoundingClientRect().width + 16 : 340;
+    rail.scrollBy({ left: dir * step, behavior: "smooth" });
+  }
+
+  langStyle(on) {
+    return "font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: .1em; border: 0; cursor: pointer; border-radius: 999px; padding: 7px 12px; background: "
+      + (on ? "#f0b429" : "transparent") + "; color: " + (on ? "#16375e" : "rgba(250,247,240,.7)");
+  }
+
+  renderVals() {
+    const p = this.props;
+    const bs = this.state.lang === "bs";
+    const t = bs ? BS : EN;
+    const key = this.state.openCase;
+    const raw = key ? t.cases[key] : null;
+
+    const mono = "font-family: 'IBM Plex Mono', monospace; ";
+    const cards = ORDER.map((k, i) => {
+      const cs = t.cases[k];
+      const featured = k === "bank";
+      const ink = featured ? "#16375e" : "#faf7f0";
+      const soft = featured ? "rgba(22,55,94,.65)" : "rgba(250,247,240,.55)";
+      return {
+        key: k,
+        index: String(i + 1).padStart(2, "0") + " / " + String(ORDER.length).padStart(2, "0"),
+        kicker: cs.kicker,
+        year: cs.year,
+        title: cs.title,
+        focus: (cs.primary || []).slice(0, 3),
+        method: cs.method || "",
+        hasMethod: !!cs.method,
+        shot: CARD_SHOTS[k] || "",
+        open: () => this.open(k),
+        rootStyle: "flex: 0 0 " + (featured ? "clamp(290px, 44vw, 580px)" : "clamp(270px, 30vw, 400px)")
+          + "; scroll-snap-align: center; display: flex; flex-direction: column; gap: 14px; text-align: left; cursor: pointer; font-family: inherit; padding: "
+          + (featured ? "30px 32px" : "26px 28px")
+          + "; border-radius: 26px; transition: transform .25s ease, box-shadow .25s ease; color: " + ink + "; background: "
+          + (featured ? "#f0b429" : "rgba(250,247,240,.07)") + "; border: 1px solid " + (featured ? "#f0b429" : "rgba(250,247,240,.16)")
+          + "; box-shadow: " + (featured ? "0 18px 44px rgba(9,24,42,.34)" : "none"),
+        headRowStyle: "display: flex; justify-content: space-between; gap: 10px; " + mono + "font-size: 10px; letter-spacing: .12em; color: " + soft,
+        indexStyle: "color: " + (featured ? "#16375e" : "#f0b429"),
+        yearStyle: "color: " + soft,
+        shotStyle: "display: block; height: " + (featured ? "240px" : "188px") + "; border-radius: 18px; overflow: hidden; border: 1px solid "
+          + (featured ? "rgba(22,55,94,.18)" : "rgba(250,247,240,.14)") + "; background: rgba(250,247,240,.06)",
+        kickerStyle: mono + "font-size: 10.5px; letter-spacing: .14em; color: " + (featured ? "#7a5410" : "#f0b429"),
+        titleStyle: "font-size: " + (featured ? "clamp(24px, 2.6vw, 32px)" : "20px") + "; font-weight: 700; line-height: 1.2; letter-spacing: -.02em",
+        methodStyle: mono + "font-size: 10px; letter-spacing: .12em; align-self: flex-start; border-radius: 999px; padding: 6px 12px; background: "
+          + (featured ? "rgba(22,55,94,.12)" : "rgba(240,180,41,.16)") + "; color: " + (featured ? "#16375e" : "#f0b429"),
+        tagStyle: mono + "font-size: 10px; letter-spacing: .04em; border-radius: 999px; padding: 6px 11px; background: "
+          + (featured ? "rgba(22,55,94,.1)" : "rgba(250,247,240,.08)") + "; color: " + (featured ? "#16375e" : "rgba(250,247,240,.78)"),
+        footerStyle: "margin-top: auto; padding-top: 4px; " + mono + "font-size: 10.5px; letter-spacing: .1em; color: " + (featured ? "#16375e" : "#f0b429")
+      };
+    });
+
+    const c = raw ? {
+      badge: raw.badge,
+      meta: raw.meta,
+      title: raw.title,
+      subtitle: raw.subtitle,
+      radar: buildRadar(raw.radarLabels, VALS[key], "light", true),
+      problem: raw.problem,
+      systemText: raw.systemText,
+      scope: raw.scope || [],
+      capabilities: raw.capabilities || [],
+      hasCaps: !!(raw.capabilities && raw.capabilities.length),
+      operational: raw.operational || [],
+      hasOperational: !!(raw.operational && raw.operational.length),
+      contribution: raw.contribution,
+      primary: raw.primary || [],
+      supporting: raw.supporting || [],
+      hasSupporting: !!(raw.supporting && raw.supporting.length),
+      challenge: raw.challenge,
+      validation: raw.validation,
+      methods: raw.methods || [],
+      tech: raw.tech || [],
+      hasTech: !!(raw.tech && raw.tech.length),
+      beforeAfter: [
+        (PROBLEM_SHOTS[key] || [])[0] ? { src: (PROBLEM_SHOTS[key] || [])[0], label: t.ui.beforeLabel, zoom: () => this.setState({ zoom: (PROBLEM_SHOTS[key] || [])[0] }) } : null,
+        AFTER_SHOTS[key] ? { src: AFTER_SHOTS[key], label: t.ui.afterLabel, zoom: () => this.setState({ zoom: AFTER_SHOTS[key] }) } : null
+      ].filter(Boolean),
+      hasProblem: !!(PROBLEM_SHOTS[key] || []).length,
+      systemShots: (SYSTEM_SHOTS[key] || []).map((src, i) => ({ id: key + "-system-" + (i + 1), src, hint: raw.photoHint || t.ui.systemHint, zoom: () => this.setState({ zoom: src }) })),
+      hasSystemShots: !!(SYSTEM_SHOTS[key] || []).length,
+      live: LIVE_LINKS[key] || "",
+      hasLive: !!LIVE_LINKS[key],
+      isPrivate: PRIVATE_CASES.indexOf(key) >= 0
+    } : { systemShots: [], beforeAfter: [] };
+
+    return {
+      t, vals: VALS, cards, c,
+      profileRadar: buildRadar(t.profile.radarLabels, VALS.profile, "dark", true),
+      achShots: ["assets/roomy-1.jpg", "assets/roomy-2.jpg", "assets/roomy-3.jpg"].map(src => ({ src, zoom: () => this.setState({ zoom: src }) })),
+      contactItems: [
+        { label: "EMAIL", value: "agrebic25@gmail.com", href: "mailto:agrebic25@gmail.com?subject=Portfolio", target: "_self", action: t.contact.actions.email },
+        { label: "LINKEDIN", value: "linkedin.com/in/amina-grebic", href: "https://www.linkedin.com/in/amina-grebic/", target: "_blank", action: t.contact.actions.linkedin },
+        { label: "GITHUB", value: "github.com/agrebic", href: "https://github.com/agrebic", target: "_blank", action: t.contact.actions.github }
+      ],
+      hasSkillsLead: !!t.skills.lead,
+      modalOpen: !!key,
+      zoomOpen: !!this.state.zoom,
+      zoomSrc: this.state.zoom || "",
+      closeZoom: () => this.setState({ zoom: null }),
+      closeCase: () => this.close(),
+      stopProp: e => e.stopPropagation(),
+      railPrev: () => this.scrollRail(-1),
+      railNext: () => this.scrollRail(1),
+      setBs: () => this.pick("bs"),
+      setEn: () => this.pick("en"),
+      bsStyle: this.langStyle(bs),
+      enStyle: this.langStyle(!bs),
+      annotationDisplay: (p.showAnnotations ?? true) ? "block" : "none",
+      textureOpacity: (p.showPaperTexture ?? true) ? 1 : 0,
+      evidenceGrid: (p.showSystemPhotos ?? true) ? "grid" : "none",
+      evidenceDisplay: (p.showSystemPhotos ?? true) ? "block" : "none"
+    };
+  }
+}
+</script>
+</body>
+</html>
